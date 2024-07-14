@@ -1,0 +1,7 @@
+Run Django (Jan-goh) project
+check superuser should be able to login from api/login - YES
+also check if user is also able to login from api/login - NO
+
+Old VM will be deleted soon, backup your data from that.
+NEW VM will be used for creating project due to docker issue.
+

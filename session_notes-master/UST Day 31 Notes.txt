@@ -1,0 +1,31 @@
+UST Day 31 
+
+Check login token functionality
+create multiple super users 
+login with any superuser and test can he change profile of others 
+
+check modheader after uncheck of authorization - it's like not logged in
+
+Connect frontend Angular with backend django
+
+run the backend
+
+create a service in front-end e.g. ng g s profile
+
+loginUrl = 'http://127.0.0.1:8000/api/login/';
+
+get the token after passing username and password
+create a function in service to accept username, password
+fetch post of login passing these values in body section
+
+
+Create a component to call an api
+first call login function - get token store in localstorage
+call second function - get token from localstorage
+pass token to service function to call another api
+get data from api
+display it
+
+
+
+

@@ -1,0 +1,100 @@
+UST Day 18
+
+please run the application
+
+
+Recap 
+created app
+added some components - hello and welcome
+What we did to apply the routing?
+
+hello - 	event binding (click), 
+		interpolation{{salary}}, 
+		pipes  | currency and changing case 
+
+	directives	structural directive - *ngFor, *ngIf
+
+<ul *ngFor="let name of friendNames"> <li>{{name}}</li>
+
+
+Angular material - we get lots of icons,
+	and many styles for all the elements
+
+install angular material  - ng add @angular/material
+import { MatIconModule } from '@angular/material/icon';
+add to imports array - 
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatBadgeModule,
+    MatSlideToggleModule,
+    MatIconModule,
+
+Set NODE_OPTIONS="--max-old-space-size=8192"
+scripts: {
+  "build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build",
+  "serve": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng serve"
+}
+
+
+in angular.json - styles array
+  "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
+            ],
+
+Bootstrap -  library
+
+property binding
+classname: string = 'text-danger';
+[ngClass]="classname"
+
+To bind to an element's property, enclose it in square brackets, []
+
+button - disable that depending on a variable 
+
+2 way binding		
+
+[(ngModel)]="company" 
+
+<input type="text" [(ngModel)]="company" />
+<h4>{{ company }}</h4>
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';		
+component - variable,
+on template i want to display it in -> input (textbox)
+If I change the textbox value, the variable should be modified 
+and again display the modified value in another element
+
+bcos textbox is part of form - 
+we have to include a module - FormsModule
+
+
+new syntax in version 17  - if for and switch 
+
+weekDay: string = 'Mon';
+@switch (weekDay) { @case ("Sun"){
+<h3>Enjoy! It's Sunday</h3>
+} @case ("Sat"){
+<h3>Enjoy! It's Saturday</h3>
+} @case ("Mon"){
+<h3>Back to work</h3>
+}}
+
+@for
+
+applied routing - how it is working?
+
+
+diffrent types of communication between components
+
+creating models to represent data 
+
+and displaying models on component view
+component lifecycle - some built-in events handler(s) 
+how to use a service
+Reactive Forms
+
+

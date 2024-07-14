@@ -1,0 +1,147 @@
+UST Day 16
+
+Recap
+
+anonymous
+In Built Functions on String, Arrays, Maths etc
+Callback
+class OOPS
+
+2 Todo List, exercises Bootstrap 
+
+4 step learning 
+
+1 watch session
+2 repeat it
+3 do it yourself
+4 experiment on it
+
+promise
+sync call
+async calls - when function may take considerable time 
+		and may return a promise
+
+async-await pattern
+
+async function asyncFunction{
+statements;
+await doSomething() // will take time
+will continue when promise is resolved
+}
+
+
+asyncFunction()
+doSomethingElse()
+
+
+Create Interview Questions
+Create some MCQ as well 
+
+javscript API calls - 
+
+Application Programming Interface 
+
+API - did we used String API yesterday? YES
+
+windows API  set of methods of functions 
+document.getElemByID()
+
+FSD API backend development -  REST API - REST is set of rules - 6 rules 
+http methods - GET, POST, Update, Delete
+
+FrontEnd will be to call API format and display
+
+databases - CRUD -  Create Retrieve Update Delete 
+backend developer 
+end user - needs data and its manipulation CRUD
+
+GET data in different ways - REST API
+
+<form action="serversideprogram.php" method="Get" >
+
+Postman - apiTesting
+
+Testing - AAA -  Arrange Act Assert
+Arrange create testing env  
+
+expected value
+
+Act - we have to call required functionality to get actual value
+
+Assert - compare them
+
+
+
+npm install --save-dev mocha@10.1.0
+npm install chai@4.3.6
+
+Typescript
+Angular
+
+mocha './specs/*.spec.js'
+
+
+var salary = 100000
+salary="abcd"
+
+Transpilation
+
+NGWorkspace
+
+To create a new Angular application
+
+ng new --no-standalone ng-app
+>cd ng-app
+>ng serve -o
+
+port 4200 http://localhost:4200
+
+open the project in VSCode
+src folder contains the main app
+index.html only html file 
+it has only 1 tag <app-root></app-root>
+
+
+at least 1 module and component(s)
+
+app folder contains module and its components
+
+module file name is app.module.ts
+an angular component is created using 4 files
+.ts  .html  .css () .spec.ts (testing)
+
+all components will be used using tag 
+
+every compoent is a class with decorator @Component
+selector - tag-name
+templateURL - component html
+if no separate file, provide template here only
+template: ``
+
+Why Angular? to create SPA 
+Why Components
+
+Componentize an application 
+
+Create a new component and use it
+
+ng generate component hello
+
+
+
+
+
+
+
+app 
+
+
+
+
+
+
+
+
+
+
+	

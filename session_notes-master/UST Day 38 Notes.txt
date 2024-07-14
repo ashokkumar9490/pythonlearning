@@ -1,0 +1,184 @@
+UST Day 38
+
+Recap
+
+Flask-Smorest, Marshmallow
+
+What was the benefit using Marshmallow?
+schema - automatic validation was there for input data and response
+we can define type of field and other constraints - required, dump-only
+
+
+Something is still missing - PK, FK, null, not null, related cascading
+All this can be completed using database models 
+SQL Alchemy
+
+Using SQLAlchemy database will be created automatically in instance folder
+
+Create another project API04_SQLAlchemy
+create a new folder models
+other files and folders we can reuse - will modify/update as required
+
+
+add sqlalchemy, flask-sqlalchemy, flask-migrate in requirements
+python -m pip install -r requirements.txt
+
+OR install manually
+
+python -m pip install sqlalchemy 
+python -m pip install flask-sqlalchemy
+
+check venv - lib folder - has sqlalchemy and dependencies installed.
+
+earlier data was in memory, was lost when application restarted.
+we want to persist the data in database - 
+
+Will be using ORM concepts, 
+we will work on objects, and table data will be modified automatically
+when we write simple commands 
+
+we don't have to write detailed SQL statements
+
+For migrations we will later use Alembic
+In flask nothing is mandatory, depending on requirement we can implement packages
+
+in db remove dictionary and create an instance of the SQLAlchemy class. 
+
+In database we want to implement 1-M relation
+1 Store can have multiple items
+
+we have to connect model with db
+define what table name should be created
+define column types and constraints
+define relationship between tables
+
+lazy loading -  
+
+suppose we have 10 stores and each store has 100 items
+when we load stores, do we need to display items along with store names
+yes (eager loading) and no (lazy loading)
+
+accordian - want to display both of them
+from database all related data will be loaded when stores are loaded
+
+sometimes it is not advisable to load related data when loading parent data.
+
+we will load later based on requirement - lazy loading (dynamic) (immediate)
+
+cascade - related data should be updated accordingly  
+- delete will delete child data
+- update will update child FK
+
+back-populates relate to another related table
+
+it will help in referential integrity of database
+
+database data should be consistent all the time - must follow the rules (constraints)
+for 1 to many relation, integrity constraint is there
+we can not add a foreign key if the value is not available as primary key
+Data type, PK, FK, Null, Not Null, default 
+
+
+from item we want to refer store
+
+display an item - display name of store - joining
+
+joining query from store, item where store.id = item.store_id
+
+we are using ORM - we have to tell what data should be referred
+
+we don't only want a reference from parent to child table
+
+load store - related items will be loaded
+when we refer any item, is it able to refer its parent table?
+
+drawback of lazy loading - we have to connect with database server multiple times
+
+
+
+abort exceptions - sqlalchemy exceptions - 
+
+change the code for resources - store.py
+when we want to change database values we have to refer db
+		
+
+how ORM works?  it will refer table - it will load the table
+
+Table    In memory it will load the data 			Objects
+there should be internal mapping of in memory objects and table records
+
+for the same purpose of referential integrity included
+or referential integrity not included
+
+sometime we want unrelated data
+i want to get all store details without referenced items data for population a dropdown
+
+can we store 2 values in dropdown?  
+
+database constraint - any rule like type, null, pk, fk, unique etc
+we can/should provide a name to any constraint
+
+SQL - 
+
+create table student(rno number primary key constraint stud_pk, 
+name varchar(20), marks number) 
+
+if we a create a constraint like pk, system allocates a name
+to the constraint - that we be a big name like uuid
+
+SQLite3 doesn't support ALTER tables - changes in table schema may not work.
+
+we will create MySQL database tables
+
+if we want to drop the constraint
+alter table student drop constraint stud_pk
+
+in this case we have to refer some metadata tables 
+get the name of constraint - and then delete / drop it
+
+Migrations with Alembic
+
+for MySQL
+
+install - pymysql
+python -m pip install -r requirements.txt
+
+RDBMS - SQLite, MySQL, SQL Server, Oracle,  
+
+MongoDB - document based database - non relational 
+
+MySQL is better than SQLite 
+SQL Server is better than MySQL
+ERD - ER Diagram - planning of DB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Angular Unit Testing
+
+Angular E2E testing
+
+Docker Concepts
+Containers vs Images
+Dockerizing the application
+

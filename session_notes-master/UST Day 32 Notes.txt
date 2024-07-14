@@ -1,0 +1,100 @@
+UST Day 32
+
+Recap
+
+Created UserProfile with persmissions
+so that only logged in user could update own profile, not for others
+however, get all and post is allowed as SAFE_METHDOS for any login as of now
+
+connected the django backend with angular
+login service method expects to pass userid and password in body section
+using service getting token after login 
+for further requests have to pass token in header to allow access of api
+
+Today we will add a new api for Feeds that is 1 to many relation with profile
+e.g. a profile can have many feeds 
+
+
+DateTime        (Today system date time may be ignored) date       Now (Date and Time)
+
+DBMS on Delete clause
+
+Foreign key name and primary key name can be different
+
+Will admin delete the foreign key data from all the related tables manually - NO
+What is the option? On Delete Trigger will be create
+
+trigger is like an auto executing server side function
+whenever an event happens that function will run
+
+Cascade - related data should be updated automatically
+cascade update
+cascade delete - delete PK record, FK records from all tables will deleted automatically
+
+Oracle - PLSQL  -  Loops If 
+Can a table have multiple foreign keys - YES
+
+SQL Query as string - what are drawbacks - Not a preferred way of executing -
+Parsing and validation is done everytime we are trying to execute on server
+then server engine creates a query execution plan -
+What indexes to be used for faster execution?
+
+SQL Injection - Security Threat  
+
+var project1 = "Google; delete * from Projects";
+
+"Delete employee where project = " + Google; delete * from Projects + " and employee name = " + empname
+  
+What are DBMS Tables indexes?  
+Most databases create index on PK column 
+
+Book has an Index    - at end of the book  
+
+topic name - pages    Primary Key 1 , 15,  156  245
+we don;t have to read all pages of the book to read one topic 
+ 
+From Leaves table     display leaves of empid 100 lacks of records 
+serial searching - slow
+
+On leaves table better create an index on foriegn key column
+1 - 1,145,3456,45665
+
+db admin - to create indexes as per usage 
+
+Select * from Employees
+
+On migration all models changes are handled.
+
+
+http://localhost:8000/api/feedvs     get all and post
+
+
+http://localhost:8000/api/feedvs/1	get by id and put delete 
+
+An anonymous (not logged in) user able to get all feeds? 
+
+
+Working with another database (MySQL)
+
+pip install pymysql
+pip install mysqlclient
+
+
+
+Get data for profiles and feeds in angular application
+display all profiles with accordian
+expand any profile to view only their feeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+

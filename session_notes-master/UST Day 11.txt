@@ -1,0 +1,188 @@
+UST Day 11
+
+built in element HTML5
+we can't create new tags
+
+HTML 	<tags> <p>This is a paragraph</p>
+element	<br />   <br></br>
+
+XML	Extensible Markup Language
+	we can create our own tags
+
+compare expected value with actual value
+
+def getValue(self):
+	return 10
+result = o.getValue()
+
+<Students>
+	<Student>
+		<RollNo>1</RollNo>
+		<Name>Aman</Name>
+		<Standard>X</Standard>
+	</Student>
+</Students>
+
+json Javascript Object Notation format
+
+{
+	"students":
+		{
+			"Rollno":1,
+			"name": "Aman"
+			"standard": "X"
+		}
+}
+
+JSON 
+
+Editor - VS Code 
+Run web pages 
+
+Extensions - vscode-icons
+		HTML CSS Support
+		HTML Boilerplate
+		live server
+		auto rename 
+
+html file 
+html  structure
+
+<html>
+	<head>
+		<title>Welcome Page</title>
+	</head>
+	<body>
+		<p>This is a paragraph</p>
+	</body
+</html>
+
+what is a paragraph? Combination of sentences.  
+			New line is there after paragraph.
+
+Heading   <h1> <h2> <h3>
+metadata information about data
+Viewport depending on device - Responsive Design 
+
+DOM        Document Object Model
+Render - displaying on the browser
+Heirarchy - 
+
+elements nested elements
+
+most important element on web page is hyperlink - <a></a> 
+
+<a> is tag name inside tag <a href=""> href is attribute of that tag
+
+there can be multiple attributes in a tag
+
+Images -  <img>  change visible size of image using height and width attribute 
+	px pixel unit
+
+live server - default browser - settings
+
+some elements are block elements those insert a new line automatically (p, h1)
+
+some are inline elements (img, a)
+
+br is self closing tag
+
+can image be used as an anchor?  nesting of elements  <a><img></a>
+
+format on save setting
+
+html discards multiple spaces - &nbsp; 
+&copy; 
+
+favicon  how to change ? can't use img tag  - we have to link favicon
+
+create bulleted list   <ul>  <li>
+
+<table> 
+	<tr>
+		<td>RollNo</td>
+		<td>Name</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Aman</td>
+	</tr>	
+</table>
+
+
+Form  - to fill / select some data
+
+	multiple controls 
+
+	textbox
+	checkboxes		when to select multiple items	
+	radio buttons		when to select 1 out of group	
+	dropdown		to select from displayed options City	
+	button
+
+	<input type=""
+
+<form>
+	
+
+</form>
+
+How to identify a particulat element on document
+id attribute to identify 
+
+Create a group of elements - by making the attribute name same
+
+
+Regex Expression
+
+Numeric   min max
+text      min 
+
+text to check the format   PAN     
+
+str = "ABCDE1234Z"
+pattern  =   "^[A-Z]{5}[0-9]{4}[A-Z]{1}$"
+
+
+bdvABCDE1234Zdfkj   VALID 
+
+number type will not allow pattern
+
+Button types 
+
+input type ="button"  will not validate 
+becouse it is for client side event handling
+
+type="submit"
+
+on the form we have to make entries mandatory
+attribute required
+
+URL address  
+data is going to server with a queryString
+?key1=val1&key2=val2
+?empname=sdfsdf&pan=ABCDE1234Z
+
+
+
+
+Practice Exercise for HTML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

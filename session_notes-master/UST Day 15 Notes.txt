@@ -1,0 +1,33 @@
+UST DAY 15
+
+Language Python, Jascript
+Head Start 
+
+Javscript 
+
+Bootstrap 
+Angular - Framework 
+
+Practice - 20 Min  9-6 
+
+Locale 
+
+Submit - 
+
+Sorting Algorithms
+Selection Sort
+
+Javascript closures
+
+sync calls		synchronous calls	default 
+		second call will happer after 1st call will complete 
+async calls		asynchronous calls
+		Tailor - lot of time - date 
+start doing other things
+i will call you
+you can get expected value 
+
+promise 
+
+
+

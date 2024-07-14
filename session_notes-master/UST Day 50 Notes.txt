@@ -1,0 +1,134 @@
+What is Docker Desktop?
+Application on windows to help us create Images.
+
+
+Concepts - compared with VM
+OS - Kernel (Core OS - commands) + Install many Applications (Office etc)
+
+We can install many OS on a machine - Hyperviser
+We can dual boot a machine - Linux + Windows
+
+You have to install OS on multiple machine - repeat steps on every machine
+I create an image of OS and use it on other machines
+
+On one OS we can install another OS
+
+We start with Windows - We can install Linux using a VM software
+
+Host OS - Windows - Another OS
+Lot of resources are consumed while creating and running VM
+Memory + Disk Space + Slow
+
+We want to create a running machine with required software and applications 
+without installing a new OS
+
+I want to run Linux without installing Linux. 
+
+I will use an image of Linux provided by open source repository.
+
+Image - (a set of files to represent a software or OS)
+Running Image will be called a Container
+
+DockerHub is used as a repo of images - hub.docker.com
+
+layers of Images
+We can create an image from multiple images as layers
+Linux image + Python + MySQL 
+
+Any image is read-only
+
+First we create Image - then run the image as container
+
+Containerization
+
+What is benefit of using image - we don't have to install on a separate machine
+				(separate kernel is not required)
+Fast , less resources used as memory and disk space.
+
+Containers are running process using images
+
+Sometimes to create an image as layers, we have to define steps - requirements.txt
+
+I need a layered image on top of that I want to install all dependencies defined in requirements.txt
+I have to copy the files (requirements.txt) to that image.
+
+We define the steps using a file - dockerfile
+Build using dockerfile
+
+Suppose we create an application - and want to run it in a container
+
+I don't need a local virtual environment
+build using dockerfile - Create a image - copy requirements.txt install dependencies on Image 
+Run run the docker image - running as a Container - it must be exposing a port 
+exposing port is also a part of steps defined in dockerfile
+
+default structure of dockerfile
+
+We can try to run a container created using an image of ubuntu
+docker commands are used to manage images and containers
+
+We can run an image in detached mode (-d) and interactive mode (-it)
+
+When image is running as a container, can't be deleted - in use.
+
+First we will try to create an image for simple flask application (without connected to db) - 1 container
+
+Next we will try to create an image for flask application using MySQL database
+2 contaiers - 1 to run flask application  - 2nd to run database 
+
+.dockerfile - defines step to create an image
+
+
+Docker Compose - defines the services - using dockerfile 
+this is used for complex scenarios like we need 2 containers 
+
+docker-compose command is used to create a composite container having multiple sub container
+search for a required image - 3.12-slim 
+
+create a file named "Dockerfile" without any extension
+we will not copy virtual environment - that will be created using requirements file
+
+Whenever we use dockerfile we have to build image before running it
+
+docker build -t rest-apis-flask-python .
+-t tag name of image 
+
+build the image using build command
+run the image with port mapping for container
+
+then test the application using new port of container
+
+composite container
+
+1 container for python application
+another container with MySQL
+both will interact
+
+docker-compose.yml      yaml  (ain't another markup language)
+
+it uses dockerfile
+first we will create a container for python using dockerfile
+
+then
+docker-compose will define communication and dependency with database container
+
+
+to create MySQL container I don't need dockerfile 
+bcos I am not defining any steps
+
+docker container volume
+even if we are using database container, it will be deleted sometime
+our data will be lost
+
+we can connect a container with a deployment machine folder
+
+data will not be stored in container - it will be stored in separate folder
+so that if container is created again, data is available at separate location
+
+it is another new format use to define configuration
+
+
+
+
+
+

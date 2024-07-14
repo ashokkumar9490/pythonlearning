@@ -1,0 +1,152 @@
+UST Day 14 
+javaScript - Why to use it?
+
+	Web Designing client side coding as well as for server side coding 
+	Client side coding for behaviour in Web Page
+	e.g. on click want to perform something
+
+What we need as software?
+We can run javascript on browser and Node 
+
+Developer's tool - Inspect - Console Tab - write commands - Ctrl+Shift+I
+
+
+Where to write javascript? 
+Along with html - <script> internally
+where to write <script> tag - head or body
+
+in script tag we can write statements or functions
+snippet 
+
+Bootstrap CDN - css in head js in end of body
+using .js file externally
+
+console.log('Working')
+we are not working on command prompt - is we work using node, we can run a program there
+
+javascript variables - var let const
+
+EcmaScript6 2015 
+TypeScript
+
+var (global scope variable) let (block scoped variable)
+
+try to use let more
+
+int x=10
+
+
+javascript formatting extension - prettier
+
+javascript is different from Java , C C++ , C#  
+create block using { statements }
+python function naming convention - snake case say_hello   
+function sayHello(){			camel case
+}
+function will not run automatically -  we have to call it.
+on any event we can call function or we can call directly
+statements may terminate with ; not mandatory - good practice to use it
+def hello():
+	print('Hello')
+
+event - OOPS - data members (attributes), methods (behavior), events (event handler) 
+Web Design - event - load (Body Load)
+
+control event - button click
+we can have multiple <script> in a section
+
+javascript error like log will appear in console 
+
+want to get function created in separate file and make it available on the page 
+external js file
+
+
+javascript as a language
+
+constant/literals
+variables
+I/O 
+constructs - looping, decision making, sequential, 
+built-in function  - string 
+arrays
+premitive data types - number, string, boolean,
+
+NaN  Not a Number
+undefined ( variable not initialized )
+
+case sensitive   boolean true / false
+null is not zero 
+database  table column null value
+
+==   equality 
+=== equality with type checking
+
+if condition   - python
+if (10 == "10"){				euqal   auto type conversion
+	console.log("equal")
+}
+else{
+	console.log("not equal")
+}
+
+
+Create a simple calculator
+
+debugging of javascript code
+
+case studies 
+user stories - task 
+
+as a user i should be able to get textbox with red background if the input value is non-numeric
+
+Where to write 
+
+textbox having non-numeric value should be red colored
+
+leaving a textbox - text1 leave - blur  text2 is active focus  blur 
+
+Implement 
+
+Loops    while  do-while  for    for-of   foreach
+
+to apply nested loop - Flags    display on browser
+
+display some value in textbox
+display something on change content of <p>
+
+
+String(val)
+formatted string			`Sum = ${sum}` 
+
+let num =prompt("Enter a number")
+		
+callback function
+promise - 
+fetch fetching data from API
+
+Stackbook
+or book 
+site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/

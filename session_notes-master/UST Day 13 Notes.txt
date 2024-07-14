@@ -1,0 +1,88 @@
+UST Day 13
+
+block element - create a new line - p and div, h1, h2
+and inline element - span 
+
+b for bold 
+also strong is used for bold - it is for reading purpose 
+
+i for italic also <em> for italic
+
+semantic elements - they have special well defined purpose
+
+is div a semantic element?  NO it's just a wrapper no special meaning
+
+.article_footer{
+}
+
+article, aside, header, footer 
+to apply actual meaning we have to apply styles
+
+earlier we use lot of div
+
+when to use strong?  read the page loud 
+
+accessibility 
+
+div
+
+link on same page
+create a link to another page and at a location
+
+styles 
+
+Recap
+
+inline, on page (internal), external  (file name.css) 
+
+<style>
+	color:red
+</style>
+
+text-align  - alignment will be as per left, right, center applied
+
+box-model
+
+margin  - left right bottom top
+only margin applied to all sides 
+
+padding - border to content gap - left, right, top, bottom
+
+border
+
+website vs webpage
+project - website - can have common theme 
+we have master page concept 
+
+
+background image on the page
+
+css selectors   - class selector 	.style1{}
+		- id selector		#style2{}
+
+
+Bootstrap 
+CDN   Content Developer's Network
+copy css in head section
+copy js at end of body section
+
+grid System - 12 col 
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+bootstrap.bundle.min.js   
+
+javascript file - very big in lines 4495 and size and bytes  - small - minimized file
+
+if you want to debug 
+
+Modal Form 
+
+
+
+
+
+
+
+

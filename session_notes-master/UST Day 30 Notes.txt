@@ -1,0 +1,68 @@
+Project 
+
+Presentation Day
+
+PPT should be ready 
+implementations 
+
+UI - Images Bootstrap Mat Icons
+Forms - Validation 
+
+Project Case Study in detail
+take care of time
+for team - 20 min -  
+
+PPT describe
+Running Project
+connectivity with
+Open Backend  - with different database - sqlite, MySQL
+Friday - Presentation on Python Topics
+
+
+https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html
+
+Books api
+Emp API
+
+
+Login
+Authentication using JWT
+Permission
+Searching
+
+APIView (we have to write required http methods) vs ViewSet (automatically CRUD operations are provided)
+
+Serializer vs ModelSerializer   (validation based on model)
+
+
+Server Side Program
+
+Web Server side - ASP (Active Server Pages)   ASP.NET MVC
+
+
+
+Design Patterns
+Concepts   MVC   Model View Controller
+	   MVT   Mode View Template
+	   MVVP    Model View  View  Presentation 	
+
+
+When a user should get a token?   On Login
+
+Do we have login api - should it be viewset based or APIView based
+
+- with url - will have to post username (email) and password
+
+we expect to get Token
+
+ObtainAuthToken is not available (not rendered by default on browser) 
+
+Create and List comes under SAFE_METHODS 
+You should not be allowed to change any other user's data
+
+
+
+
+
+
+

@@ -1,0 +1,214 @@
+UST Backend Day 26
+
+Can we use existing applications in VM? 
+push you code to gitlab from laptop
+in VM clone it
+open any code folder in 
+
+In vm install latest (17) Angular version
+npm install -g @angular/cli@17
+
+install json-server on VM
+npm i  -g json-server
+
+
+Django Backend
+
+Why Django? 
+	We need a backend server side API creation framework 
+	OpenSource
+	
+
+What was the issues with json-server?
+	It was providing URL for data endpoints.
+ 
+Endpoints -
+	http://localhost:3000/emps
+	http://localhost:3000/emps/1
+	http://localhost:3000/emps/2		Delete
+
+	news/country=in
+
+What feature we expect from backend API
+	Secured endpoints - not open 
+	login with creadentials - token based authentication
+	
+	login form - fill it with credentials - get token
+	use token in header of further requests to get data from endpoints
+
+
+	Club - card - wristband - access facilities multiple times without showing
+			identity
+
+  
+	Persistence - save your chages in database - rather than a file
+	Database support - heterogenous - different 
+	We should be to change database with few configurations/settings
+
+	default database may be configured, but we can change it - SQLlite3
+
+	Django is battery included - Login feature, superuser feature
+		
+	Some framework may not give you all features - 
+	angular 
+	
+	models 	- describe entities 
+	urls	- endpoints
+
+	we will create multiple views that will provide data based on url
+
+
+Manage Profile Application
+	login url	- JWT token
+	get all profiles
+	get profile by id
+
+	a user profile may handle many feeds/order/request
+	1 to many relation
+	
+	url   /feed  get all feeds of all the users
+		/feed/id  get all feeds of logged in user 
+
+	any user should not be allowed to update other users feeds
+	data of others should be read-only
+
+
+REST - REpresentation State Transfer - set of rules (6 rules)
+client - server architecture should be used 
+Postman,browser,SPA application - API Server
+
+No state is saved about request
+
+Http protocol is stateless - 
+What is a State - Data
+request and response no state should be saved on server
+everytime request is going to server, we have to pass required data (token)
+
+in workspace create a folder - profiles-rest-api
+in that folder - 
+we create a file requirements.txt in C:\Sharad_Workspace\DjWorkspace\profiles-rest-api
+
+Ctrl+Shift +p   select python interpreter - 
+select global path
+select additional dependency required - select requirements.txt
+it will create a new .venv virtual environment as a folder
+
+close current terminal
+open it again
+virtual env should be activated 
+
+(.venv) C:\Sharad_Workspace\DjWorkspace\profiles-rest-api\.venv\Scripts>
+
+should be the prompt to make sure that venv is activated
+but in VSCode, it is activated as information in popup 
+but (.venv) is not displayed in prompt.
+
+We should create virtual env for any project to keep versions of installations separate from global one
+
+we write the packages required before creating any project
+Similarly we have package.json in angular  - npm install
+
+
+Recap
+
+create requirements.txt
+	django
+	Djangorestframework
+
+pip install -r requirements.txt
+
+create folder profiles-rest-api
+
+django-admin startproject profiles_project .
+python manage.py runserver
+
+
+in project settings file - installed apps add -
+
+'rest_framework',
+'rest_framework.authtoken',
+'profiles_api',
+
+Migrations for database  - Object Relational Mapping 
+
+coding for database connectivity 
+
+ADO 
+JDBC 
+
+on database server - 
+create Database First
+create tables first
+put data in tables
+
+Connection - server name, authentication, databse name,
+Command - SQL command as string - parsed - run
+procedures - reusablility and for precompiled version for SQL
+
+As a developer - could it be better that I don't have to create tables and database
+
+Classes and Objects - Models
+
+This facility is provided by Object(s) Relational Mapping - ORM
+Table is also called relation
+record is called tuple
+
+how model will be converted to database table?
+Create Migrations - script to create tables
+Migrate
+
+In django user model and superuser model is already available
+
+cli commands are there to create superuser 
+User Model we are overriding from existing model
+
+
+check format of email - it convert later part of email
+
+Sharad.Singh@gmail.com
+password will be saved as hashed password not in a plain text
+
+
+
+
+UserId
+Email 
+
+What is a model and how it is used for mogration?
+It is representation of entity (noun) of concern depending on case study / project
+It is implemented as a class or interface 
+
+OOPS - Inheritance, Abstract Class (to allow inhertance without being instantiated), 
+
+In Python how to create Inherited class 
+class Manager(Employee):
+
+
+Interface
+
+MakeMigrations command will create scripts to generate table
+Migrate command will run script to actually create tables
+
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+
+colorama
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

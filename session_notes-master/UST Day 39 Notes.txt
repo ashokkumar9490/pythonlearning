@@ -1,0 +1,156 @@
+UST Day 39
+
+Deployment 
+
+When run the laptop - option to run Windows or Linux e.g.
+We can install multiple OS on a laptop
+Dual Boot Machine
+
+VM  - It is sharing Hardware resources
+On Virtual machine we have to install OS
+
+We want some better option - so that we don't have to install OS again
+
+Containerization - Why this is important?
+
+Monolithic Applications (big app with many functionalities) Single Deployment 
+Collection of many features as a big application
+
+It is not preferrable - in terms of maintenance, deployment, scaling, 
+Vs 
+Divide and Rule - Componentization - 
+
+Front End - components in Angular
+Back End - Divide your back end application into multiple applications
+		every application having its own separate database
+Microservices - API create using above concept
+
+Development will be easy - will focus on a single requirement with sep db
+We can work on agile teams - smaller teams with repeated deadlines - iterations
+Agile (supports regular interaction with Client 
+	they can suggest changes, changes are always welcome ) 
+
+Sprints  - 15 days cycle - iterative changes
+
+deployment will be multiple deployments
+
+Scaling - deployment - run on multiple servers - replicated servers - automatic 
+	scale up and scale down
+
+For deployment we don't want to create separate VMs
+
+Container and Image - a copy of installations
+Images are used to run containers
+
+First we have to create Images
+
+VM - OS Image - static copy of installations
+Container is running image
+
+First we will create image - running image is called container
+
+every part of application is interacting with other parts of application
+
+It is difficult to make communication between parts (Microservice) of application
+vs Waterfall (maintenance) 
+Deployment will be 
+
+Flask Application - it needs dependencies - flak flask-smorest
+requirements.txt
+
+start creating create .venv - ask for global interpreter - python.exe
+ 
+On container we have to install everything required including Python 
+
+We have to configure all this in a file named Dockerfile
+
+FROM python:3.12-slim
+
+from where we are getting these?  dockerhub (repository for images )   -    git  github
+
+Imgages are layered - on top of a layer we can add more things
+
+Install Docker desktop - will install docker cli
+
+
+Take a flask application - add requirements.txt file
+add Dockerfile
+
+FROM python:3.12-slim
+EXPOSE 5000
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+CMD [ "flask", "run", "--host", "0.0.0.0"]
+
+
+run command to create image- 
+>docker build -t flask-api01 .
+
+when trying to run docker image we should set the port number for running container
+
+docker run -d -p 5005:5000 flask-api01
+check on running container from browser or postman
+
+
+Image
+Container
+Docker Desktop done
+
+Development - Deployment
+
+In a folder with git  - git init
+git push origin - gitlab-ust
+GitHub account - sign in using google account
+
+push your development to GitHub - latest development 
+
+Connect to github.com
+Sign in
+Create a new repo without readme
+
+Render is a deployment platform
+Sign in to Render.com using google 
+On Render create a new Web Service
+connect with GitHub providing URL
+
+Render
+GUnicorn - is the server that is running your application on Render
+
+Docker container will be created on render and will be running using GUnicorn
+
+Docker Hub - will add add a docker container there
+Render
+GUnicorn
+
+
+Workbench - MySQL
+Compass - Mongodb   - Port 27017  
+
+Mongo University - free courses 
+
+
+sample data - for MySQL for SQL Server  -    Northwind   (imaginary trading company)
+			Microsoft has created many sample database for SQL Server/MySQL
+
+			these will have a set of many related tables
+
+		Ecommerce application  (Amazon - Trading company - Trade - Supplier - Customer)
+
+		Categories			Data should be meaningful 
+		Products
+		Suppliers
+		Employees
+		Customers
+		Carts
+		Orders		demo for all types of queries (subquery)
+		Payments
+		Shipment
+				
+
+Flask-PyMongo  is required for connecting flask with mongodb
+
+In a query we can select records and we can select columns
+
+
+

@@ -1,0 +1,191 @@
+UST Python Day 2
+
+Recap 
+
+Git 
+Python
+
+Print
+Input 			1 value  multiple values Split(' ')  Split(',')
+Formatting
+Data Types 
+
+Interpreter, Dynamically Typed, 
+Not a Strongly Typed language
+x=10	
+print(type(x))
+x="abcd" 
+print(type(x))
+
+
+range(start, stop, step)   
+start -0
+step -1
+range(5)		0,1,2,3,4    5 is excluded
+collection
+to print all values in the Range we can use any loop
+for i in range(2,10,2):
+	print(i)
+
+Immutable - can't change / update			reverse - Mutable
+
+variable = identifier user defined
+constant = literal
+right x1 y123, my_salary         x1 and X1 are different
+wrong 1x , my salary, 
+variables should be meaningful salary myname
+
+Naming conventions - rules  cases - camel case, pascal case,      snake case
+				myName		MyName		   my_name
+				myActualSalary	MyActualSalary     my_actual_salary
+
+Random Access Memory  RAM Bit Byte 
+	Stack Memory function calling		Heap Memory (Objects)
+
+Memory Address Street Name House No 
+
+import os
+os.system('cls')
+
+variable scope   - where it can be accessed?
+
+global scope
+local scope
+
+any function will not run automatically
+we have to call it
+
+squiggle
+
+
+string built-in functions
+
+ljust  left justification
+rjust	
+
+lstrip left strip few characters  "   ABCD***"
+rstrip
+strip
+
+if if elif else			keywords - should not create a variable with these names
+for 
+while
+
+
+Nested Looping
+
+2D printing  row wise col wise
+
+outer loop for rows 
+inner loop for columns in every row
+
+12345
+12345
+12345
+12345
+12345
+		
+for row in range(1,6)			row = 2
+	for col in range(1,6)		col = 1 to 5
+		print(row)
+11111
+22222
+
+
+
+
+
+
+
+
+
+
+
+break - go out from current loop
+
+continue - go to the next iteration of the loop
+
+exit	- stop execution of program
+
+return	- return a value from function
+
+return (value)
+
+
+Practice Exercises
+
+PR-01
+enter Num - 5
+1
+12
+123
+1234
+12345
+
+PR-02				
+enter Num - 5		loops ? 3 loops
+    1
+   12
+  123
+ 1234
+12345
+
+
+PR-03
+enter Num - 5
+    1
+   121
+  12321
+ 1234321
+123454321
+
+PR-04
+enter Num - 5      
+10001		row == col 
+01010		row + col == 6
+00100
+01010
+10001
+
+PR-05
+enter Num - 5
+ 1 5 2 4 3 3 4 2 5 1
+
+
+PR-06
+
+Enter Marks of exam (Maths only)
+Display Result based on that
+>=75	Distinction
+>=60 	First
+>=45   	Second
+>=33	Third
+else	Fail
+ 
+
+
+PR-07
+
+This exercise will help you practice using conditional statements (if, else) in Python.
+
+Function Name: is_eligible_to_vote(age)
+
+Description: This function takes a person's age (age) as input and determines if they are eligible to vote in the United States (voting age is 18). It returns True if the person is eligible and False otherwise.
+
+Sample Input:
+
+20 (user is above 18)
+17 (user is below 18)
+Sample Output:
+
+is_eligible_to_vote(20) -> True (user is eligible)
+is_eligible_to_vote(17) -> False (user is not eligible)
+
+You are eligible to vote!" (for user age 20)
+"You are not eligible to vote yet." (for user age 17)
+
+Challenge:
+
+Modify the function to display a different message depending on the age difference (e.g., "Just turned 18? Welcome to voting!" or "You'll be eligible in X years").
+
+

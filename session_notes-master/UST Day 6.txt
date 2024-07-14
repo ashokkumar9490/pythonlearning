@@ -1,0 +1,57 @@
+Day 6
+
+Linear 
+constant 10
+variable x=10
+why array?  a=1, b=2, c=3, d=4
+print(a)
+print(b)
+
+array - collection of values of same type
+arrays - index 
+
+[a*{45+78}*(88+99)]
+
+[3443{454}]
+
+MCQ Assessment   conceptual 
+		snippet based 
+Single Answer 
+
+20 questions - 20 marks - 
+Dictionary - Key Value Paired 
+
+	key must be unique
+
+simple dictionary - 1 key 1 value
+		friendname - mobilenum
+
+dictionary collection is ordered
+will maintain the order of addition
+
+
+xml format 		
+json format 
+
+Iterable - Collection
+
+Stack
+Queue 
+
+Recap
+
+CRUD - Create Retrieve Update Delete operations Web API 
+database operations 
+
+
+
+
+
+
+
+
+
+
+
+
+

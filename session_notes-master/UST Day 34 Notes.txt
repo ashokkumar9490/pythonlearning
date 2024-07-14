@@ -1,0 +1,285 @@
+UST Day 34
+
+Django is like Angular - 
+A fixed folder structure and mechanism
+to provide serialization, Views, Viewset, urls, 
+
+Flask - we can start with a simple py file
+
+Flask is not battery included 
+
+It is lightweight framework for web development
+	we can create front end as well back end
+
+	front end is not as we create in Angular 
+	In flask we can create templates (html) 
+
+
+Intro of Flask 
+Differences between Django and Flask
+Start with a simple API without any data - HelloWorld
+To understand the installations for flask
+
+
+
+
+Flask Smorest (View)
+Flask Marshmallow for Serialization, validations and Documentations
+	In API documentaion on browser we want to show the endpoints are available
+	This was automatically in Django when we register urls
+	Swagger UI is standard for API Documentation
+Will connect with Database using SQLAlchemy 
+	will connect with multiple database - 
+	will configure MySQL as well 
+
+	but to support any database 
+	we have to install supporting package
+
+Migrations using Alembic - ORM 
+Deployment using Render and GUnicorn
+
+	Cloud deployment using local git, github repository,
+	From Github repository will deploy application to Render Site
+	to run our application in Render we will need runtime server
+	that is provided by GUnicorn
+
+ 
+	
+Will create a set of APIs
+based on following related Entities - Store and Items
+
+1 Store can have multiple items
+
+Store - Store Id and Store Name
+Item - Id, Name, Price, and relation
+
+GET all, GET by ID,
+Post Store
+
+Post Item for any store
+
+WSGI Web Server Gateway Interface
+
+Gateway - Entry point to set of APIs
+		Security
+	replication	creation should be ideally automatic based on usage	
+			
+Deployment replication with multiple servers			
+		
+	On sale days 		
+	Amazon has new year sale for 5 days		
+	After 5 days automatically servers should be minimized		
+Kubernetes 			
+Docker			
+
+Angular has template system
+	1 way binding ()
+	2 way binding  [()]
+	interpolation	{{ }}
+
+Same system will not work in any other application
+	
+
+Create a workspace
+Create a folder
+Create requirements.txt
+
+Ctrl+Shift+P      create .venv
+		select global python.exe
+	select dependencies to install - requirements.txt
+	Will create .venv folder - 
+	with all installation
+
+Create an virtual environment - 
+	
+Create a folder - create app.py file
+Initialize your flask app
+create function(s) using some urls
+defined by @app.route()
+on terminal make sure your flask app is the path
+Run you app using >flask run 
+command
+
+By default we have to run flask app again after changes saved
+
+Will configure this using a configuration file
+.flaskenv
+
+	FLASK_APP=app
+	FLASK_DEBUG=True
+
+if we are not using .flaskenv file settings
+>flask  --app .\app09_StoresJson.py  run --debug 
+
+When running app on production server
+we should not display error messages to end users
+
+but right now we are working as development mode
+and debug mode is on
+
+we can have multiple app files in project
+change .flaskenv file to set app name
+
+rerun the server again if env file changed.
+
+install requests using adding it to requirements.txt
+>python -m pip install -r requirements.txt
+
+
+import requests
+import render_template from flask
+
+calling external api - using requests.get(url)
+how to pass parameters to url - using <name>
+
+
+using key of response data we can fetch response value
+we want to display output as a html template
+
+to use template, create templates folder in project
+	and create .html file to be used as template
+
+
+rather than returning some data we are returning
+render_template(with html file name and data passed to template)
+
+
+
+
+Day 35
+
+For Flask we can create a separate workspace
+
+create requirements.txt 
+
+python -m pip install -r requirements.txt
+
+pip install flask
+
+Recap
+
+Store and Items API using in memory database without using Smorest
+Implement Smorest for the same APIs - Validations (manual)
+Add Marshmallow to smorest - Documentations / Validations
+	Swagger-UI - it displays documentation on browser 
+	documentation is available for every endpoint
+
+How to start?
+In workspace create .venv using VSCode option 
+
+create a project folder
+API01_Simple -   understand starting of flask app
+		how to create endpoints
+		return some json data
+
+.flaskenv
+
+flask --app app2 run debug=true
+
+create app.py  file
+
+/guess/<name>
+def getName(name):
+
+url define internal parameter binding
+	
+name.title() is working as title filter method  - title case 
+we can also use pipe for the same purpose  
+
+<h1>Hey {{ name.title() }} or {{name | title}}</h1>
+
+Flask - micro framework for web development 		
+		Front end (templates) and backend (API)
+
+Django and Flask can be used for templates as well
+	creating API
+
+Why Angular as SPA - Angular framework
+
+java C C++  C#   use {} blocks  if(cond){
+				}
+
+Python
+def func();
+	statements
+
+VisualBasic  blocks are written using opening and closing keywords
+
+for
+
+endfor
+
+template -  integrating html with jinja 
+
+sometime we want to use logging facility - info error 
+	log can be persisted in a file
+	or can be displayed on console
+How to enable logging in flask
+
+
+import logging
+
+logger = logging.getLogger('werkzeug') # grabs underlying WSGI logger
+handler = logging.FileHandler('test.log') # creates handler for the log file
+logger.addHandler(handler) # adds handler to the werkzeug WSGI logger
+
+logger.info("Here's logger info from guess " + name)
+how it is different from print? will append logs and can be saved on file
+
+
+
+
+
+
+Starting with Store API
+
+create a in-memory store as a list of stores having multiple items
+
+Test API using Postman
+Create collection in postman to group all related requests
+
+create a store without items	
+to create a store, what data should be passed
+will pass only store name - items will be blank list
+
+
+this will allow duplicate store names
+reason - we have not put any manual or package validations 
+
+try to put some validations so that only store with new name can be added
+
+List comprehension - 
+returns single value or multiple values? 
+
+[1,2,3,4,5,6,7]  if x>5
+
+/store   get all
+/store   add store post
+
+add item to existing store
+/store/<name>    	get by name
+/store/<name>/item     post item
+
+item values will be passed from body
+{
+	"name":"Table",
+	"price":789
+}
+
+storename
+item {name and price}
+
+first check storename is existing
+items.append(new_item)
+
+then check item with passed name is existing
+
+if not item
+add item to items collection
+
+
+Implement
+Get Store details (name and items) by StoreName
+pass StoreName in parameter
+
+

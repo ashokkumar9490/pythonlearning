@@ -1,0 +1,133 @@
+DAY 7
+
+Why OOPS? Object 
+Noun - Entity - Visible Objects Non-visible Object 
+
+Entity - Laptop - 
+we deal with objects - describe/identify - attributes 
+SNO 
+
+What that object can do? behaviour
+
+
+In normal programming
+x=10
+person1.age = 25		
+age=25
+person1 is an object of Class Person 
+Class is a template 
+Object is an instance of that class
+
+Car Maruti Swift  Class
+We purchase an object of the class
+
+Car Drive it - Learn Driving - Minimal information required 
+Complexity Hiding abstraction 
+Passbook - update - data should be protected 
+
+Bank - Withdraw  Deposit  - form - counter - Ledger 
+bank counter is like a interface - public 
+private and public etc
+interface - functionality (money)
+
+Balance - attribute 
+
+A class will have - attributes and functions and event 
+
+	Submit Button - Object of Class Button
+	attributes  - color , size 
+	functionality - send data to server 
+	event - click - onclick function write functionality
+				event handler
+
+Electric Switch  - Attributes - Color , Amp  
+		Functionality  - Run Fan, Switch on the light 
+		Event - Switch On - Switch Off 
+		Wired Up - attaching function to event 
+
+Employee - not very important as of this requirement 
+
+
+Abstraction		Attribute  - deciding on that 
+Encapsulation		putting all attributes, functions and events and other things
+
+Inheritance		- Relationship between objects 	
+			
+			Rose IS A Flower		Child class  ->  Parent Class
+							Derived class  
+
+					What a Child class can have - all members of parent
+						+ specialization
+							
+			Employee IS AN Student 
+			Student IS an Person
+			Manager IS an Employee 
+
+			Parent and Child 
+
+CAR HAS An  Engine 
+Don't reinvent the wheel - modification is better than creating again
+
+Polymorphism   -  dealing with related objects with same command
+
+		PutAttendance - Contractors / Employees / Managers 
+
+	List - []
+
+Concepts 
+
+Create a class 
+Create an object of that class
+
+
+Create a class Circle with radius attribute 
+create a function calculate_area and return the value
+try to get pi value from math.pi
+Display area for multiple circle objects
+implement __init and __str   as well 
+from __str call the function, get area and print 
+
+
+Create a class Height with attributes feet and inches
+object is created like h1 = Height(40)  
+feet should be 3' inches should be 4"
+display details in format -  Height = 3'4"
+
+
+h2 = Height(80)  
+Height = 6'8"
+
+public 	attributes avalable outside class
+
+private can not be used outside any class
+	can be accessed in self class only
+		
+protected members are accessible from self and derived class
+
+DOG IS An Animal
+
+Base class
+Derived class
+
+Inheritance
+
+
+Multiple Inheritance			class A(B,C)
+Multi Level Inheritance			
+
+					Class Person
+					class Student(Person)
+					class Employee(Student)
+
+All derived class members get all base class members
+
+
+Object Creation in case of Inheritance
+
+ Abstract Class
+
+
+
+
+
+

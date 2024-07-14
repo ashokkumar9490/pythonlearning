@@ -1,0 +1,224 @@
+UST Day 17
+
+Recap
+Angular
+
+Roundtrip Application   
+SPA
+
+check installation - ng version
+create folder ngworkspace
+under that created a project / angular application
+
+ng new ng-app 
+
+ng new --no-standalone ng-app 
+
+
+
+2016 - angularjs 
+angular2
+angular 17 
+till angular 16 older logo shield logo was used 
+version 17 they have removed the requirement of importing and declaring in app.module
+new logo is there for angular 17
+
+
+to run the application - ng serve -o
+
+open 2 cmd windows - one for running application 
+2nd for creating components and other objects
+
+Create a component - ng generate component hello
+OR 		ng g c hello
+
+Services are also required - ng g s service1
+
+html w3c
+
+every new component will be created in separate folder with component name
+having 4 files .ts .spec.ts .html .css
+
+How app component is displayed? In index.html - <app-root>
+In component ts file it is defined as selector.
+
+to use a component - we have to use its tag-name <app-hello>
+
+app- is added to/ prefixed to component name in selector 
+
+Component is a class decorated with @Component decorator
+	selector
+	templateURL
+	styleURL
+We want to use new component - parent component can use child component
+Where to use it? We will use it in app component - 
+
+
+Create one more component - welcome
+
+Parent component - app-root
+
+2 child components - hello and welcome
+always run angular application using ng serve command
+
+If I have to remove any component - 
+	delete the folder
+	remove the <tag> used in parent component
+
+Module and component 
+
+An angular application will have at least one module
+that module can have 1 or more components
+
+components are registered in app.module.ts file
+another file is there app-routing.module.ts
+From app.module.ts remove import of component and declaration of component
+In case we have to change app.module.ts
+restart your application
+
+Most of the languages use this pattern - Dependency Injection
+
+Design Pattern - Well defined solution to well know development problems
+GOF - create a set of design patterns 
+
+Singlelon Pattern - developer want a single object can be created for a class
+
+OOPS
+
+We create a class  - it has dependency of other class objects
+
+		suppose that dependent class is changed,
+
+class MainClass:
+
+	obj1 = Interface1 - Class11()		create objects of interfaces here
+
+	obj2 = Interface2 -  Class2()			
+
+
+Container Program - Interfaces will be linked with classes
+
+don;t create the objects of classes inside the main class
+
+create them in a container 
+
+interfaces  Java 
+
+In .NET and Java - they don;t support multiple inheritance 
+we can not derive from more than one class
+
+interface in place of classes
+interfaces are set of abstract methods - without any logic / implementations
+
+obj1 = new Class1()		Person	
+class2(Class1)			Student
+
+obj2 = Class2
+obj1 = obj2
+
+interface1 = Class1
+Class3(Class2 + Interface3)
+i1 = Interface1
+
+obj3 = Class3
+i1 = obj3
+change Class1 to Class11
+Build a house - Floor - Rooms - Every room need window and gate - frame 
+
+Why we are discussing in Angular - Dependency
+
+communication from component to template
+Component - myName:string="Sharad"
+Template - Binding -  {{ myName }}
+text-interpolation
+
+communication - from template to component
+in html what we can do? to be handled in component.
+event binding - click in normal onclick="DoSomething()"
+in angular syntax is (click)="SayHello()"
+
+Directives - Structural Directives - looping *ngFor , conditional *ngIf
+
+How to use bootstrap on Angular - using CDN 
+
+using npm i bootstrap
+
+Open angular.json and insert a new entry into the styles array:
+
+"styles": [
+"styles.css",
+"../node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
+
+
+<router-outlet /> will be used for angular routing
+
+
+In project there is a file styles.css 
+used for global styling
+
+
+angular pipes | - are used for some formatting 
+uppercase, lowercase, or applying currency formats
+
+
+
+,
+styles             "node_modules/bootstrap/dist/css/bootstrap.min.css"
+scripts 	"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
+On table apply thead and tbody sections to apply bootstrap colors
+
+For Bootstrap using CDN and 
+npm uninstall bootstrap
+
+
+I don't want to display components by default
+I want to populate them on menu click
+
+routing 
+
+commented component calls from app.component.html
+
+we have to modify routing file - app-routing.module.ts
+
+In Routes array add paths
+
+
+Day 18
+
+
+
+https://material.angular.io/guide/getting-started
+ng add @angular/material
+
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+
+@NgModule({
+  declarations: [AppComponent, HelloComponent, WelcomeComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    MatBadgeModule,
+    MatSlideToggleModule,
+    MatIconModule,
+  ],
+
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<br />
+<mat-icon
+  aria-hidden="false"
+  aria-label="Example home icon"
+  fontIcon="home"
+></mat-icon>
+
+remove from angular.json styles- 
+"@angular/material/prebuilt-themes/indigo-pink.css",
+
+
+https://material.angular.io/components/table/overview
+

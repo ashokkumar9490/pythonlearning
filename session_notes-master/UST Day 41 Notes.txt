@@ -1,0 +1,24 @@
+UST Capstone Projects
+
+Project Implementations
+
+Document is a Guideline to the project - 
+You are allowed to change or add any requirement with discussion 
+None of the requirement is mandatory or to be done as it is
+
+Start from minimal requirements 
+Whatever you implement, should be perfect
+
+rather than implementing 10 requirements - start with 5 fully implemented
+UI wise and functionality wise
+
+at least one API using flask
+rest user defined APIs using Django
+at least one external API 	
+
+
+Form should be there in every project with proper validation
+
+Integration will be a challenge.
+
+We should use 2 databases at least - SQLite MySQL and MongoDB

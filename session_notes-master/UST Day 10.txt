@@ -1,0 +1,80 @@
+UST Day 10
+
+Recap numpy
+pip install numpy
+np.arange(
+
+Data Cleaning  
+
+Records
+some column values are null - 
+I want to delete those rows
+I can replace null with some values
+
+
+Unit Testing
+
+TDD pattern - Test Driven Development
+
+	We should write all the test cases first 
+	write code
+	run test 
+	if tests fail
+	improve code
+	run test again - repeat steps
+
+Testing Types - Unit, Integration, Performance, Black Box, White box testing
+
+What is Virtual Environment 
+Why we use it
+
+We are creating folder ,  write code and run it.
+How we create venv
+
+
+
+every project is using same python version?
+Why we need other versions of python?
+
+
+
+python - where it is installed?
+
+How we are using it?
+
+
+
+
+python -m venv env
+
+Ctrl+Shift+P
+Select Interpreter   - Choose recommended (env)
+
+PS D:\UST_Python\PythonDemos\PythonDemoSharad\PythonTestingDemo>
+
+
+
+
+create post.py file under blog folder
+
+create tests folder under blog folder
+
+create 2 folders - unit and integration under tests folder
+
+create blank __init__.py file in each folder
+create it in one folder, copy paste in all folder
+
+create test_post.py file in unit folder
+
+
+
+
+
+
+
+
+
+
+
+
+

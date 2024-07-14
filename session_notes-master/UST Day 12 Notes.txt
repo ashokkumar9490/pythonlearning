@@ -1,0 +1,53 @@
+UST Day 12 Notes
+
+Recap 
+
+HTML 5
+
+structure
+head
+body
+elements
+attributes
+
+for address which control? textarea 
+
+p, headings, br, ul, li, a, img 
+forms - input buttons 
+
+audio, video, documents pdf <iframe>
+div span  
+
+css - cascading style sheets
+
+selectors { key1: value1, key2:value2 }
+
+p 
+
+style - color font alignment etc 
+
+1. inline style 
+2. internal style	which has priority? -  inline
+3. external style
+
+element selector 
+
+Creating styles with userdefined named 
+
+that can be reusable on any tag
+
+class style		.mystyle1{color: red}	that can be applied to many tags
+id style
+
+span vs div
+
+color
+background-color
+font-family
+font-size
+text-align
+padding
+margin
+border
+box model	
+box-shadow

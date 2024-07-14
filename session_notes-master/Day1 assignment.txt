@@ -1,0 +1,18 @@
+
+create a function convert_units(value, from_unit, to_unit)
+Parameters:
+value: A numeric value (float) representing the quantity to be converted.
+from_unit: A string representing the starting unit of measurement ("cm", "in")
+to_unit: A string representing the target unit of measurement ("m", "ft")
+
+let the function handle only these 2 conversions.
+
+convert_units(100, "cm", "m")
+convert_units(20, "in", "ft")
+
+convert_units(20, "kg", "g")	# display error 
+
+
+
+
+

@@ -1,0 +1,99 @@
+Django Day 28
+
+Recap
+
+DBMS  constraints (rules)
+
+on a column - null pk unique
+table can have multiple unique columns
+but can have only 1 primary key (unique)
+Student - RollNo (PK), RegNo, email, mobile
+can a PK have ___null value____? No
+Can a unique have null value ? Yes - only 1
+ 
+Migrations to create table(s) from model - ORM concept
+
+APIView   -    is part of DRF DjangoRestFramework
+What an API should have? url (endpoint(s))  Get Post Delete Put Patch
+
+view.py - is used to create http method functions those 
+can be accessed using urls 
+
+Angular Service - fetch - 
+
+Http Request - Response 
+
+from django.urls import path
+from profiles_api import views
+
+urlpatterns = [
+	path('hello-view/', views.HelloApiView.as_view()),
+]
+
+Project has multiple apps
+we have to configure project urls with app (API) urls
+
+
+Create class derived from APIView in views.py to define http method(s)
+In API app create urls.py file if not available 
+add a url for a api method
+connect api url with project url in project urls.py file
+
+def post(self, request):
+        """Create a hello message with our name"""
+
+        name = request.data.get('name')
+        return Response({'message': f'Hello {name}'})
+
+Concept - Serialization & Deserialization  
+
+	passing data from one format to another format
+
+	we create an object while running the program, and next time we run the program, object is lost
+	because object is create in memory
+	if we want to persist that object - we can write to multiple targets
+	ORM - database
+	binary file
+
+	When writing data - serialization
+	when reading data from that file - deserialization
+
+In API we are going to use same concept - to pass data from request - string to python object
+again I want to send data back to response 
+
+In DRF serialization halps us to define - validations on input data
+
+from rest_framework import serializers
+
+from profiles_api import models
+
+
+class HelloSerializer(serializers.Serializer):
+    """Serializes a name field for testing out APIView"""
+    name = serializers.CharField(max_length=10)
+
+
+outside the method - 
+serializer_class = serializers.HelloSerializer
+
+
+inside the method - 
+serializer = self.serializer_class(data=request.data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+Day 36 Notes
+
+Recap 
+
+We started with simple collection - 
+Id was missing 
+we are creating nested collection
+we can;t create table inside table - to handle that issue
+remove nesting of collection
+create separate collection - reference 
+input data should have expected keys 
+(if we pass itemname in place of name, will be KeyError)
+
+We started with List of Stores
+
+@app.route("/greeting")	
+
+is equivalent to
+@app.get("/greeting")
+
+And since ["GET"] is the default, this is equivalent to
+@app.route("/greeting", methods=["GET"])
+
+
+Today will start with same type of API but with more validation
+and more methods - PUT DELETE
+
+I want to change collection concept
+In table PK will have number and it is autoincremental
+
+1 store1 
+2 store2
+
+in dictionary I want to add id automatically as a unique values
+uuid to generate always new unique ids
+
+In third step we will implement Marshmallow 
+swagger-ui is standard for API documentation
+It will be created automatically with the use of Marshmallow
+We have to provide some configurations
+
+
+
+
+
+

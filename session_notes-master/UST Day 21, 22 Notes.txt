@@ -1,0 +1,165 @@
+UST Day 21
+
+Reactive Forms
+Login Form Exercise - Designs 
+
+To redirect to any component using path thru code
+we use router service (built-in service) 
+inject it in constructor
+
+Is it mandatory to use Angular Material? 
+Bootstrap / Angular Material / Fontawsome / Google Fonts /
+How we remember it? refer it
+
+Assessment for Web - HTML CSS JS Bootstrap material
+
+Capstone Project - Client Sharad - Stakeholders 
+Technical and Non-Technical User Friendly-ness
+User Acceptance
+
+http Methods
+
+Services - API connection
+Rest API -  to get the data using http methods 
+
+CRUD -  GET (All data)  GET (By Id) Get (By Dept)  POST DELETE UPDATE PATCH
+
+Where is the API that we will use till we create our own?
+
+External APIs - Freely available
+
+we can create an API locally without using any backend technology
+JSON-SERVER
+in project folder
+npm install -g json-server
+
+create a json file - loaded by json-server as an API
+
+json-file contains an array of objects - with path for images
+
+create a folder - "server" at the same level of src
+in server folder create a file db.json
+
+created a folder images under - src -> assets
+put your images in images folder
+
+run json server in project folder - port 3000
+
+json-server --watch .\server\db.json
+
+Postman can be used for testing - all methods like Post and others
+create a new request- GET untitled request
+
+response status code - 200 ok
+
+Using Postman to test API
+
+
+get all 		http://localhost:3000/emps
+get by id		http://localhost:3000/emps/2
+post request
+
+copy an existing object available
+{
+      "id": 1,
+      "name": "Amit",
+      "salary": 34567,
+      "image": "../../assets/images/face1.jpg"
+    }
+
+in postman change the method - Post
+click on Body Tab
+select raw option
+dropdown change to json
+url should be - http://localhost:3000/emps
+
+status - 201 Created 
+
+Creating a Service for fetching the data from Rest API
+ng g s emps 
+
+create a component emps
+ng g c emps
+inject emps service in the emps component
+
+
+
+
+
+to show each employee as a card 
+using a child component
+
+create component "emps-details"
+in component.ts file @Input()
+
+to create models for entity classes 
+create Models folder in app folder
+in that create emp.ts   - class Emp
+
+What we are trying to do?
+
+WeekEnd - Learning - 
+Practice
+
+
+Service 
+
+
+Guard   authorize 
+
+
+Project 
+
+Entity  - Employee / Department - Server - API 
+
+GET Show
+
+
+API calls should be async
+
+fetch(post).then(getall)
+
+
+If server is not running, show some status
+
+ECart - Categories - Products - Cart - Order - Payment - Checkout
+
+Same component data sharing {{count}}
+Service + Without calling functions
+
+
+Group - 5 each - component - components - 
+
+
+
+Who will be the Team Lead - advantage - score 
+Team - 5 Lead 
+try to become lead 
+Lead - don't do anything
+30 days 
+
+Win Win for all
+Stakeholders
+Company
+You
+Me
+
+Login - Logout
+caching
+paging
+searching
+filtering
+
+
+you should have one working template for project
+
+installing
+
+
+
+
+
+
+
+
+

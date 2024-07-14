@@ -1,0 +1,473 @@
+Stackbook
+gitlab-ust
+
+Solution to Exercise 
+
+repo share with me as a reporter
+
+Git
+
+Git 
+Use Pull and push
+Repo
+clone
+add files and folders
+commit our changes
+push back to repo 
+
+
+gitlab-ust
+Repo 
+
+9-6
+
+8:45 
+
+recap 
+
+session - demo 
+concepts - 30-70 
+
+PPT's with IDE
+VS Code
+Pycharm
+Jupyter Notebook
+
+Quiz
+Exercise - solution
+
+Python Data Types Conversions
+
+Exercise - 
+
+Python-learning
+
+
+Second Half - will discuss it 
+
+refactor 
+testing
+code practices 
+
+Assessments 
+
+Quiz 
+Coding
+
+
+Capstone Project
+
+Case Study in groups 
+
+Back End (API) + Front End (Angular)		FSD 
+Language 		Web Application 
+Frameworks 		HTML CSS Bootstrap JS
+Django + Flask 		Angular
+
+Complete Working Web Application 
+
+Authentication
+User or Admin
+
+Menu 
+
+API - Web API External 
+Application Programming Interface
+register key 
+Weather 
+
+
+
+
+Agile
+Test Driven Development
+Test case(s) - fail 
+Write good code 
+Run test - may be fail 
+improve code - all test cases passed 
+First write the test case(s)
+boundary case >60 >=60 
+input - output 
+exception(s) Handling
+
+1 Go with my session concepts and demos - share sessions 
+2 replicate (practice)
+3 write the code without reference 
+4 experiment with it 
+5 exercise 
+
+validate the Learning 
+
+45 min of session - discussion quiz 
+45 sessions 
+
+2-3 sessions 
+
+2 hours 
+References 
+
+Revise 
+
+
+Challanges of learning 
+1 - remembering prev content
+Practice - 
+
+Be Tru to Yourself
+Presentations 
+
+
+
+Invest - to get some return - 10%
+on learning 
+What I want to get as return 10% 
+You have to add 10% learning of my delivery 
+
+Read some Books, reference some 
+
+Share with Others - 
+
+
+
+
+Interaction Open 
+Video 
+
+Engagement with the learning
+Quiz
+
+In b/w 
+
+
+
+
+
+Laptop 
+Software
+
+Git 
+VS Code (Editor) - Generic editor for everything
+Light 
+Add extensions 
+	.NET 
+	Java
+	Angular
+
+
+- Pycharm (IDE) - Notebook 
+Integrated Development Environment
+
+Jupyter Notebook
+Interactive 
+
+Postman - Testing API
+Docker Desktop 
+
+MySQL
+MongoDB
+SQL Oracle 
+	DB2 
+
+Tables
+Relationships
+Constraints
+1-1
+1-M
+M-M
+
+
+
+Database SQL MySQl vs MongoDB  NOSQL
+
+Devops 
+
+TDD
+CI CD
+Containerization
+Deployments - Pipelines 
+
+
+Completing vs Understanding
+What you are getting
+
+
+Git Why? versioning  
+	sharing
+	collaborating
+
+How to check installed?
+git --version
+
+distributed 
+
+how to use my repo on my laptop?
+Created repo - copied https url for cloning
+1 clone it 
+	git clone repourl
+2 add content
+	add a text file
+3 add to versioning
+	git add .
+4 commit the changes locally 
+	git commit -m "commit1"
+5 push
+	git push -u origin master
+6 Sharing
+	add members to the repo with roles
+	Repo - Project Information - Members
+7 add more content
+	
+
+
+
+
+Can we start with local repo 
+create a folder in laptop 
+and push it to git repo - YES
+
+
+.git 
+
+
+git init
+added a file
+
+I want to share with others 
+git remote add origin https://gitlab-ust.stackroute.in/sharad.singh/testgit2.git
+git push -u origin master
+
+
+
+github
+
+username and email
+
+
+9 
+9:15 Attendance 
+
+
+Tea Break 11 am  - 15 Min			4 - 4:15  
+
+Lunch 1 - 2 
+
+
+
+
+
+
+
+Statements 
+print 
+Comment #
+Java C C# 
+Python - indent 
+{
+}
+Data - Data Types 
+Dynamically Typed Language
+
+a=11
+a="abc"
+
+
+print ("Hello World")
+a=123
+print (a)
+				# a = 123
+
+print("a = ", a)
+
+
+
+Ctrl + K + C
+Ctrl + K + U 
+
+"""
+"""
+
+Programming Concepts
+
+strongly typed language   C# Java
+				int c=10;
+					c=20;
+
+variables 
+ 		a = 11		type(a)
+		a = 12.5	type(a)
+		a = "abcd"	type(a)
+
+Conversion 		
+Round 		
+
+
+constant 		fixed value "India"
+				1947 
+				1234.56
+data types 
+operators
+	expression        operators and operands
+		x = x + 5		arithmatical 		
+		print(2**5)
+
+relational operators and or 
+		if 5<6 or 7<6:								print("ok")
+
+T or T 	=	T		
+T or F  = 	T
+
+constructs 
+conditional if if-else  if-elif-else  
+		switch 
+iterations looping - doing something multiple times
+
+	for 		how many times?
+	while (T)
+		when to use it
+	for each	collection 
+	
+	i=1
+	while i<10
+		print(i)
+		i = i + 1
+
+
+	infinite value 
+
+Stop execution Ctrl+C
+
+errors - syntax error 
+		
+
+	compiler 
+	interpreter 
+
+	logical error  - how to correct? debugging 
+
+		print log 
+		debugging techniques 
+		breakpoint 
+		
+	String		method()	and property (identify)
+			behaviour	
+
+person1.name = "Sharad"
+person1.Sleep()
+
+Sleep()
+
+why we create function?
+	to reuse code 
+
+
+	functions  can be called  funcname(arg)
+
+
+class 
+  OOPS method (function)
+
+
+
+
+
+			Person	Name Age 
+
+Entity Noun 		Visible  Person, Laptop, Car 
+			Account 
+
+OOPS 
+
+	Data Structure
+		linear data structure 
+		Array list 
+		
+	File Handling
+
+	Packages - reuse - library  for reference 
+		set of functions may be reused in many projects
+		Accounts
+
+hackerRank  - problems - C# Python
+
+Algorithm building 
+Logic Building
+To be a good developer 
+template 
+
+Performance 
+
+magic variable fun1.__doc__  
+
+magic functions 
+
+Constructor 
+
+Ask questions to yourself - referring 
+
+
+Enter 3 numbers    33 44 55
+Display Sum
+
+a, b, c = map( input().split()
+anum = int(a)
+bnum = int(b)
+cnum =int(c)
+
+Enter Name and Age - Sharad Singh,31		space 3 values
+						split with , 2 values
+Split 
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

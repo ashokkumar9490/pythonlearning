@@ -1,0 +1,86 @@
+UST Day 29
+
+Recap
+
+hello APIView DRF
+Serializer - for validation and providing input fields
+urls on api and project
+we bind a serializer with the view
+
+We will start with a new model (independent)
+to create independent model we have to derive from 
+AbstractBaseUser is already derived from models.model
+
+model will have many properties 
+Book - title author 
+Using ORM,
+migrate - it will create a table - columns - title author
+
+On admin portal we can manage all registered models
+as well as we can manage database using inbuilt 
+database API using shell 
+
+How many mode we have ? 1 UserProfile
+Why we created UserProfile model? to add more properties
+
+HelloSerializer is not using any model
+we can handle request and response without any model
+
+model = class (contains many properties)
+create a __str__ to string represent object 
+
+1
+serializer is again defining validation rules 
+that we already defined in models level
+I have to write validation for every property of model class
+
+
+ModelSerializer
+
+2
+APIView
+right now we are creating all http methods for endpoints
+is it possible to create all the http methods automatically
+
+till now we are using APIView
+Yes - using ViewSet we can achieve this
+
+We are unable to create object using model 
+Serialization should be different for that
+
+
+Point of concern
+Every time we have to create a new angular project
+ng new new-app
+we have to install everything
+
+Sol - Create a template project from existing running project
+ 
+
+
+
+Practice 
+Create a model Employee (Id, Name, Salary, Projects[] )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

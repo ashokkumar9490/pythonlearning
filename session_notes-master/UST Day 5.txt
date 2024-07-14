@@ -1,0 +1,73 @@
+Folder - Manage files and folders
+Namespace 
+
+Family - namespace - no 2 people with same name 
+namespace - many objects with no name conflict
+
+Files - Scripts (.py) - writing statements / functions
+How to use a function from a script in another script
+a function is reusable 
+
+Module - script that can be referred - import 
+Package - collection of modules 
+
+mymath is a module
+use_module in main module
+
+Ctrl+Space to start loading intellisense 
+
+Can we run the module?  YES 
+
+
+
+if __name__ == "__main__":
+	doSomething()
+
+
+to check whether we are running the module driectly
+or it is being imported from another module
+	
+
+In a module we can have multiple functions and executable statements 
+it is for initialization of the module 
+
+create a module - simple mymath.py file
+create another file to import it  -  use_module.py
+run use_module.py
+if any executable statement are there, will run first 
+
+
+
+
+
+
+
+
+
+import random, os, requests,
+
+request and response - client and server - web server / data server 
+web works - browser - url - request - 
+server 
+https://www.google.com - DNS - Domain Name Server - 
+How we identify a machine - IP - 
+http hypertext transfer protocol
+https domain server 
+www world wide web
+response in what format html (web page) / javascript 
+
+
+Web HTML +   CSS + JS +      Bootstrap 
+forecolor  bgcolor backgroundcolor
+   content style behaviour    library
+    
+package installer for python	- 
+
+PIP  
+NPM node package manager  
+javascript - node 
+
+Angular - JS - TS (superset of JS)
+Full Frontend Application
+
+

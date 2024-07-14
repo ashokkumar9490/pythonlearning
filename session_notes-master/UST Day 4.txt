@@ -1,0 +1,138 @@
+Why functions - reusability   DRY  Don't Repeat Yourself
+
+Developer - Design Patterns  GOF Gang Of Four - 
+are proved solutions to regular/ well known problems a developer face 
+e.g. 
+OOPS 
+I want a class so that I can allow to create only 1 object of the class
+Service - that should run only once 
+Singleton Pattern
+Adapter Pattern 
+
+pass keyword - you want to create a function and implement later on
+
+
+argument - is the value we pass while calling the function
+parameter - is listed while defing the function
+if there is a mismatch, error will happen
+positional argument
+
+can we combine positional and keyword arguments? YES
+But the condition is - 
+Positional argument cannot appear after keyword arguments
+
+
+built-in function  print()	we are using them
+user-defined function		we are creating and using them
+
+overriding the default values
+
+readability standard
+def of function can start with a gap of 2 lines
+
+squiggle red		error
+squiggle blue		warning
+pylint extension to check various coding standards
+
+
+
+create a function to print a line of 40 dashes
+-----------------------------------
+
+
+
+
+2 exercises - submit by 1pm       - on GitLab folder 
+					pythonlearning reo
+					pythonexercise  - all 
+i will release 2 more exercises now
+
+tuple - set of values   (44,'abc', 56)
+
+
+looping 
+**kargs 
+interview questions 
+
+Nested Loops  - 2 d array 
+
+
+Array -  collection of same type of elements 
+
+List - collection of any type of elements  
+
+duplicates are allowed in both 
+
+riddles 
+
+long codes 	refactoring	smaller code
+		functions
+		
+
+What is a good code?  
+	scalable 
+	less execution time      how we measure it? Iteration     Big O Notation
+
+1	O(1)			fastest   Print(1)   print("hello")  
+2	O(logn)			binary search (data should be sorted)
+3	O(n)			search an element in array (linear searching)
+				By using TOC Table Of Content vs Index
+4	O(n^2)			slowest		nested looping 
+
+
+algorithm - logic build - steps 
+
+Reference are for any object(s)  functions are objects
+functions can be referenced
+
+def func1():		# named function
+	print("func1")
+
+
+f1 = func1
+func1()
+f1()
+
+decorator
+
+lambda
+nested function
+function can return another function
+function reference
+
+iteration  - looping 
+iterator - which can be iterated - collection 
+start from somewhere - next - end 
+examples of iterator -  list dictionary tuple set 
+
+a collection is not list 
+a list is a collection
+
+Lambda  -  are writing anonymous (unnamed) function
+how we create anonymous function lambda keyword
+
+f2 = lambda : print("func2")	
+
+map function runs some functionality on each element of collection
+and creates another colelction 
+	
+
+lambda a,b : a+b
+
+def get_sum(a,b):
+	return a+b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+UST Day 3
+
+Submit your practice solution in Git Repo after completing
+
+VS Code Extensions - Python, Python Snippets, Python Debugger
+
+Jupyter Notebook -  
+python --version
+pip --version
+pip install notebook
+
+
+VS Code - open a folder - create pyhton files
+1 create folder - cmd - code . - this will open VS Code 
+2 Open VS Code, Open folder - Browse and open
+
+Create a folder / files with .py extension
+Open terminal
+run program - python file.py
+
+git clone authentication with stackroute id and password
+
+function can return a value 
+	return 
+
+def get_sum(n1, n2):
+	return n1+n2;
+	
+
+result = get_sum(11,22)
+print(result)
+
+DRY - Don't repeat yourself
+
+Create a repo
+clone			// not to be repeated for a repo
+
+repeat - 
+we add folder(s)
+We add file(s)
+
+
+// git pull // if remote repo is having more changes
+
+git status
+git add .
+git commit -m "day3 practice1"
+git push origin
+
+git commit -m "day3 added 2 more question"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

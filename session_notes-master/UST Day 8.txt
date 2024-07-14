@@ -1,0 +1,126 @@
+Day 8
+
+OOPS 
+
+Recap
+
+concepts of OOPS
+
+Abstraction - Hiding Data
+Encapsulation - Putting all members attributes, methods together
+Inheritance - creating derived class from base class for reusing 
+Polymorphism - 
+
+class is a template 
+objects are instance of the class 
+
+public members are available outside the class as well
+private members are not available outside the class - not available in derived classes as well
+protected members are avalable in the class as well as in derived class - not from outside the class
+
+class Employee:			# instance attributes - id and name
+	dept="IT"		# class attributes
+	def __init__(self, eid, ename):		# constructor
+		self.id = eid
+		self.name = ename
+
+	def __str__(self):
+		return(f"Id = {self.id} Name = {self.name}")
+
+	def display(self):
+		print(f"Id = {self.id} Name = {self.name}")
+	
+	@classmethod
+	def Disp_Class_attributes(cls):
+		print(f"Dept = {cls.dept}")
+
+
+using decorator @name before function 
+
+
+emp1 = Employee(1, "Emp1")
+emp2 = Employee(2, "Emp2")
+emp1.display()
+emp2.display()
+print(emp1)		# more readable
+print(emp2)
+
+Inheritance    IS A relation 
+
+all base class members are available to derived class
+
+derived class is also called specialized classes
+
+class Person:					Name, Address		
+
+class Student(Person)				Standard 		super().__init__(name, address)
+
+class Employee(Student)
+
+class Manager(Employee)
+
+we have to refer base class members - 
+derived class initialization uses base class initialization
+
+
+Student IS A Person       base class - Person  derived class - Student
+Employee IS An Student
+
+class C(A,B)
+Types - Multilevel and Multiple
+
+Abstract Classes 
+
+
+
+	magic functions
+	functions
+	attributes
+
+Why Abstract class? just for derivation
+		    not for instantiation
+
+How to do it? derive class from ABC
+
+Abstract method  - without any code or logic 
+
+DRY 
+Single Responsibility Principle
+
+a class or a function should have only one reason to __change__
+a function should be responsible for 1 functionality 
+
+calculate_base_salary  function should calculate only salary 
+it should display some values 
+calculate some other attributes
+
+Maintenance 
+
+
+
+logical error 
+exception
+
+Enter your name 23
+
+Is it an exception?
+
+Enter your age?  int("abcd")
+
+Is it an exception?
+
+
+
+
+
+
+
+
+
+
+
+
+File handling
+Exception Handling
+
+

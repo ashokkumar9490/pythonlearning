@@ -1,0 +1,69 @@
+UST Day 37
+Smorest - Marshmallow
+
+In step 3 focus is on to implement blueprints - documentation and schemas 
+
+Schema - data definition - for any entity - what benefit?
+
+Database - table - schema - table and field structure
+
+
+Till now we did step 2 - we had 1 app - 
+it was having all urls
+we are dealing with 2 entities - Store and Items
+	or Authors and Books
+not a good idea to create all urls in same app 
+we should componentize the application
+It is not following a principle - SRP 
+In django we used concept of views and 
+We want to group entity based urls separately in class derived from view
+
+In flask we have to create blueprint for that
+What is a blueprint?  
+
+http://localhost:5000/item		GET(ALL), POST				id,name,price,store_id   name,price,store_id
+http://localhost:5000/store/id		DELETE, PUT, Get(ById)			
+
+to create group of these urls we create blueprint as classes 
+in separate files - practice is to create a resources folder 
+to keep all your blueprints - for store and for item
+1 file for 1 entity with multiple classes to represent 
+different tyepes of urls
+
+In app we will use those blueprints
+
+How to it?
+
+In uuid they create it using hasing system - to validate a key 
+token
+
+If I can bind blueprints with schema automatic validation will be done.
+
+We have to create schema for entities - we can create single file or multiple files
+
+schema will be different for - different blueprints
+
+to create an item
+
+name
+price
+store_id
+
+Using Marshmallow we define schema 
+Create an EntitySchema class derived from Schema Class
+Schema can check the type of data as well
+
+flask-smorest includes installation for Marshmallow
+
+Base class for View is MethodView - from flask.views
+Blueprint class is available from flask-smorest
+
+Blueprint will also define documentation
+
+How we are attaching blueprint with schema?
+2 ways -  response (response) - request (arguments with schema)
+
+
+app has to register blueprints
+also app has to register swagger-ui 
+

@@ -1,0 +1,185 @@
+Exception Handling
+
+try:
+	statements
+
+exception:  (multiple)
+
+
+	exception IOError:
+
+we can handle multiple exceptions in the same block
+
+except without any exception name
+
+except: will handle all not handled exceptions
+
+only at end of exception handlers 
+
+
+ValueError it is exception class 
+is it derived from any other class? Exception
+
+built in exception class
+user defined exceptions - SalaryRangeException(Exception)
+we can raise an exception 
+
+
+
+
+
+
+statement will raise the exception 
+raise exception (built in OR user defined)
+
+
+else:
+
+finally:
+
+
+traceback - want to see all line numbers from where exception initiated and 
+where it is handled
+
+import traceback
+
+print(traceback.exc())
+
+File Handling
+
+Text File  		.txt   human readable
+Binary File		not human readable .jpg .bin . 
+
+f = open("file1.txt")
+
+f.read() will read whole file content
+f.read(10)
+
+windows what is new line?
+
+
+line1			\n\r		\n		encoding
+line2
+line3
+
+VS Code settings - search for file - python - check path
+
+w mode
+
+
+List
+Dictionary
+Exception Handling
+
+
+
+
+
+close()
+
+Numpy and Pandas
+
+
+
+pip install numpy
+pip install pandas
+
+
+In a string Check number of vowels 
+
+str = "welcome"			3
+
+for each char in string
+	check if it is vowel 
+		count ++
+
+	display count
+
+Check a string to contain all characters (a-z)
+"Everyone is Welcomed in Olympics"				True/False
+for each char in alphabets
+		
+Quick Brown fox jumps over a lazy dog
+
+
+
+List, Array 1D
+
+numpy arrays  MultiDimension
+
+OLA 
+
+create classes for 
+
+Driver can have multiple rides		Contains 
+
+	Ride 
+		RideId
+		FromWhere
+		ToDestination
+		Fare
+
+	Driver 
+		name
+		carnumber
+		rides - list of Ride objects
+
+Rides
+
+
+
+
+Do we have to implement inheritance?  NO   
+ add data to lists, dictionaries
+
+display count of rides and sum of fare for each driver 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unit Testing
+
+Assessment  
+
+
+
+
+Create a class Employee with attributes Id, Name, Salary
+
+Create a function calculate_tax with slabs
+Check the salary range before calculating tax 10%
+if salary > 500000 raise an SalaryError (user defined exception)
+with attributes errorno and message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

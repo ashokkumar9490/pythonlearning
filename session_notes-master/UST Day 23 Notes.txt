@@ -1,0 +1,147 @@
+UST Angular Day 23
+
+RDBMS - Why Id is important - Primary Key - Foreign Key
+In terms of API why Id is important?
+
+API - verbs - http verbs - http methods
+
+API Functionalities
+Get All (GET)  		http://localhost:8000/employees	
+Get By Id (Get)		http://localhost:8000/employees/1011
+Create record(POST)	http://localhost:8000/employees	(with data)
+Update (Update)		http://localhost:8000/employees/1011 (with data) 	
+Delete (Delete)		http://localhost:8000/employees/1011
+Partial Update(Patch)	http://localhost:8000/employees/1011 (with data)
+
+MongoDB, MySQL (Worked)
+
+Angular components / parent and child communication / json-server / services / 
+
+--------------
+
+Routing Guards
+
+ng generate guard auth (user)	CanActivate  - based on user type (login )
+ng generate guard admin (admin)	CanActivate
+
+Changing menu - adding Logout on login - challenging
+in login component - if logged in - I have to tell topbar component for login successful
+login component and topbar component are sibling components
+
+if parent - @Output()
+if child - @Input()
+we have to use service - 
+
+ng g s sharing - to share some data / information to other components
+it is dependent on  login component
+In login component inject sharing service
+
+Similarly implement user.guard
+
+admin - has more rights - can open both pages 
+
+guard
+app.routing  guard is protecting a menu 
+login
+sharing.service			isLoggedIn = True
+
+event - login onLogin- 	isLoggedIn = True - redirect 
+
+
+to be reflected in topbar 
+
+
+Imperative Programming - Typescript / Javascript
+b=10
+c=20
+a = b + c
+print(a)
+b=25
+
+Reactive Programming - 
+b=10
+c=20
+a = b + c
+print(a)
+b=25
+
+next()
+next()
+next()
+
+return - single
+yield return - multiple values 
+
+ng g c logout
+add this in app.routing with logout path
+
+In what scenarios we need it?
+data is coming in stream
+
+rxjs - 
+
+Promises 
+Observable - Oberserver to be notified whenever observable has some notification
+
+topbar is observer - sharing sharing is observable - isLoggedIn = True
+enable Logout link - *ngIf 
+
+Right Now - Not able to display Logout on Login
+
+It is a part of design patterns
+Publish - Subscribe pattern
+Newspaper is published				Observable  Notify Subscribers
+We subscribe for it
+Whenever a version is available, we get it
+We are waiting for publish -  done, we get it   Observer
+
+You have not subscribed for a newspaper - you need it  - you have to purchase it
+
+pull service response
+push service response 
+
+
+create a menu component - topbar - in template put your navbar
+
+
+In Logout Component - get confirmation for Logout - Yes and No Button
+On Yes - logout and redirect to Home Page
+
+
+Products  - prods -  json-data  -  mobiles
+foreach mobile in json-data - <product>
+
+
+Product - 
+
+
+
+
+
+======================================================
+
+are you able to implement everything till now?
+
+
+
+
+==============================
+
+I want to run json-server with multiple entities data
+
+emps
+mobiles
+
+x   create multiple files - .json
+create a single .json file with multiple arrays
+
+
+
+
+
+
+
+
+
+
+

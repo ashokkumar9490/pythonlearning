@@ -1,0 +1,102 @@
+Day 24 
+
+emps[] = 20 records (all the records)
+
+on (click) of fav button - 
+
+We need a component to display fav emps
+collection (array)  - push current edet
+where to put this array? - in a service
+
+create component show-fav
+
+today's exercise - 
+
+1 Check existing fav 
+2 Display success or failed toastr on add to fav
+3 Display count on Favs Tab of menu as badge
+4 Display delete feature on favs
+5 Show favs using cards
+6 Display total salary of favs
+7 update count and total salary on delete 
+8 If no fav is available after deleting all, show No fav available
+9 Logout confirmation - Yes/ No - colors
+10 Delete all - Show Fav
+
+Next we will try to get data from an external API
+
+https://newsapi.org/
+register and get apikey
+
+
+https://newsapi.org/v2/top-headlines?country=in&apiKey=08eb952963d
+replace your key and try on browser
+
+create a news component and get data from external site and display it
+create news service
+
+
+ng serve
+
+Component Level - ng test
+
+
+
+forfiles /S /M *.spec.ts /C "cmd /c ren @file *.spec.ts1"
+
+
+
+
+What we are trying ?
+End 2 End testing E2E
+
+Cypress Testing
+
+npm install cypress --save-dev
+npx cypress open
+
+tsconfig.json
+comment     //"sourceMap": true,
+
+start your application  - ng serve -o
+npx cypress open
+
+
+
+
+
+
+
+
+
+
+
+Web Site - Many html pages and other resources 
+
+www.google.com    DNS    IP of server - Web Server ( Software )
+Website should be hosted on a web server
+
+Tomcat Apache 
+IIS Internet Information Services  - IIS Server 
+
+It iS a part of OS - but it is hidden . 
+
+We can enable it using Windows Features.
+Where it is installed?   c:\inetpub
+
+We have tried to run an html file from folder
+
+
+SSMS SQl Server Management Studio 
+IIS Manager - IIS
+
+index.html is default web page
+default.html
+
+Angular - index.html
+
+main is the entry point
+
+bootstrap - starting app
+
+Angular - can have multiple Module(s) - AppModule
