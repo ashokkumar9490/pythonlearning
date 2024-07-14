@@ -1,0 +1,44 @@
+Angular Practice Exercise: Product List with Filtering and Formatting
+This exercise will help you solidify your understanding of Angular components, bindings, pipes, and structural directives by building a product list component with filtering and formatting capabilities.
+
+Function: ProductListComponent
+
+Component Description:
+
+This component will display a list of products with properties like name, price, and category.
+It will allow users to filter the product list based on a selected category (e.g., "Electronics", "Clothing", "Home").
+Products will be displayed with their names, formatted prices (using a currency pipe), and categories.
+Sample Input:
+
+TypeScript
+products = [
+  { name: 'Laptop', price: 1200, category: 'Electronics' },
+  { name: 'Shirt', price: 25, category: 'Clothing' },
+  { name: 'Headphones', price: 75, category: 'Electronics' },
+  { name: 'Dress', price: 50, category: 'Clothing' },
+  { name: 'Coffee Maker', price: 80, category: 'Home' },
+];
+
+selectedCategory: string = '';
+
+Sample Output (HTML Template):
+
+<h2>Product List</h2>
+
+<select [(ngModel)]="selectedCategory">
+  <option value="">All Categories</option>
+  <option value="Electronics">Electronics</option>
+  <option value="Clothing">Clothing</option>
+  <option value="Home">Home</option>
+</select>
+
+<ul *ngIf="products.length > 0">
+  <li *ngFor="let product of filteredProducts">
+    {{ product.name }} - {{ product.price | currency:'USD' }} ({{ product.category }})
+  </li>
+</ul>
+
+<p *ngIf="products.length === 0">No products found.</p>
+
+
+

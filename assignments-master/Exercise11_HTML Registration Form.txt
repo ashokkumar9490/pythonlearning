@@ -1,0 +1,7 @@
+Create a registration form for any domain you worked on in previous project.
+Use all controls like Button, DropDown, CheckBoxes, radio Buttons etc.
+Use id and name attributes for each element.
+Use input types according to usage for using built in validations.
+Check all validations on Form Submit.
+
+

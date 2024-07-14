@@ -1,0 +1,8 @@
+The page should be designed using HTML5 elements and CSS style properties.
+▪ Page should have a meaningful title.
+▪ Each element on the page has to be styled using CSS style properties.
+▪ Header and Footer although different elements, but should be styled using same style rules.
+▪ Use CSS properties to size, align and apply rounded border to the image in the main section.
+▪ The navigation link text color should change when the link is hovered and when clicked.
+▪ The paragraphs in the main section should be justified on both sides.
+▪ Highlight the aside element with a different color to make it distinctly displayed.

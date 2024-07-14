@@ -1,0 +1,16 @@
+Angular Exercise 16
+
+Create an angular application - 
+
+Components
+
+friends - display all friend names - in red if name starts with R, in blue if name starts with B
+
+employees - declare members - id, name, salary
+create method getTax() to calculate and return 10% tax from salary
+display payable salary with currency formatting 
+
+add paths and menu 
+
+ 
+

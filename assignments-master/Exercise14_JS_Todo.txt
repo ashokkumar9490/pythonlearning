@@ -1,0 +1,42 @@
+JavaScript Exercise: ToDo List with Due Dates 
+
+This exercise combines arrays, strings, and dates to build a simple to-do list application with due dates.
+
+Objective:  Create a JavaScript program with functions to manage a to-do list with due dates.
+
+Functions:
+
+addTask(task, dueDate): This function takes two arguments:
+task: (string) The description of the to-do item.
+dueDate: (string) The due date of the task in YYYY-MM-DD format.
+The function adds the task and due date as an object to a global toDoList array.
+
+displayList(): This function iterates through the toDoList array and displays each task with its due date in a user-friendly format.
+It should highlight tasks that are overdue (due date has passed).
+
+markComplete(taskIndex): This function takes an argument:
+taskIndex: (integer) The index of the task in the toDoList array.
+The function marks the task at the given index as completed by potentially adding a flag to the task object or removing it from the list.
+
+Sample Input:
+
+addTask("Buy Groceries", "2024-05-25");
+addTask("Finish Project Report", "2024-05-20"); // This task is overdue
+addTask("Clean the House", "2024-05-23");
+
+displayList();
+
+markComplete(1); // Mark the second task (Finish Project Report) as completed
+
+displayList();
+
+
+Sample Ouput:
+
+
+To-Do List:
+
+1. Buy Groceries (Due: 2024-05-25)
+2. **Finish Project Report (Overdue: 2024-05-20)**  **// Overdue task highlighted**
+3. Clean the House (Due: 2024-05-23)
+
