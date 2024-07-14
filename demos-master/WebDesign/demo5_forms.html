@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <form>
+      <table>
+        <tr>
+          <td>Employee Name</td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter Name here"
+              name="empname"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td>
+            <input type="text" placeholder="Enter City here" />
+          </td>
+        </tr>
+        <tr>
+          <td>Date Of Birth</td>
+          <td>
+            <input type="date" min="2000-01-01" max="2020-12-31" />
+          </td>
+        </tr>
+        <tr>
+          <td>Course Duration in Years</td>
+          <td>
+            <input type="number" max="5" min="3" />
+          </td>
+        </tr>
+        <tr>
+          <td>Enter PAN</td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter PAN"
+              name="pan"
+              pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Enter Mobile</td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter Mobile"
+              name="mobile"
+              pattern="^[987]{2}[0-9]{8}$"
+              required
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Email Id</td>
+          <td>
+            <input type="email" placeholder="Enter valid email" />
+          </td>
+        </tr>
+        <tr>
+          <td>Select Stream</td>
+          <td>
+            <select>
+              <option>Select Stream</option>
+              <option>Commerce</option>
+              <option>Science</option>
+              <option>Arts</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Select Skills</td>
+          <td>
+            <input type="checkbox" id="chkC" name="skills" />
+            <label for="chkC">C</label>
+            <input type="checkbox" id="chkCPP" name="skills" />
+            <label for="chkCPP">C++</label>
+            <input type="checkbox" id="chkJava" name="skills" />
+            <label for="chkJava">Java</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Select Sports Activites</td>
+          <td>
+            <input type="checkbox" id="chkCricket" name="sports" />
+            <label for="chkCricket">Cricket</label>
+            <input type="checkbox" id="chkFootball" name="sports" />
+            <label for="chkFootball">Football</label>
+            <input type="checkbox" id="chkSwimming" name="sports" />
+            <label for="chkSwimming">Swimming</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Select Gender</td>
+          <td>
+            <input type="radio" id="radMale" name="gender" />
+            <label for="radMale">Male</label>
+            <input type="radio" id="radFemale" name="gender" />
+            <label for="radFemale">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Select Online/Offline Course</td>
+          <td>
+            <input type="radio" id="radOnline" name="course" />
+            <label for="radOnline">Online</label>
+            <input type="radio" id="radOffline" name="course" />
+            <label for="radOffline">Offline</label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

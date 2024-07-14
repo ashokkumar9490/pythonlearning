@@ -1,0 +1,12 @@
+<div *ngIf="edet">
+  <app-emps-details [edet]="edet"></app-emps-details>
+  <br />
+  <button
+    type="button"
+    (click)="addFav(edet)"
+    style="width: 150px"
+    class="btn btn-lg btn-success"
+  >
+    Add Fav
+  </button>
+</div>

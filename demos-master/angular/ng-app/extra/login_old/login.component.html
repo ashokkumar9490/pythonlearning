@@ -1,0 +1,72 @@
+<div
+  id="maindiv"
+  class="container"
+  [ngStyle]="{ 'border-color': loginForm.valid ? 'blue' : 'red' }"
+  style="
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 20px lightblue;
+    background-color: rgba(191, 211, 239, 0.148);
+  "
+>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div style="line-height: 200px; vertical-align: middle">
+      <h2>
+        Log In
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="login"
+          style="position: relative; padding-top: 4px"
+        ></mat-icon>
+      </h2>
+    </div>
+
+    <!-- <mat-error *ngIf="!loginForm.valid">
+          user id and password not provided
+        </mat-error>
+        <mat-error *ngIf="loginForm.valid">
+          user id and password are provided
+        </mat-error> -->
+
+    <mat-form-field>
+      <mat-label>User Id</mat-label>
+      <input
+        matInput
+        id="userid"
+        placeholder="User Id"
+        formControlName="userid"
+        name="userid"
+        autocomplete="off"
+      />
+      <mat-error> Please provide User Id </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        id="passwd"
+        type="password"
+        placeholder="Password"
+        formControlName="passwd"
+        name="passwd"
+        autocomplete="off"
+      />
+      <mat-error> Please provide Password </mat-error>
+    </mat-form-field>
+    <br />
+    <button
+      mat-raised-button
+      id="btnLogin"
+      color="primary"
+      [disabled]="!loginForm.valid"
+    >
+      Login
+    </button>
+  </form>
+</div>

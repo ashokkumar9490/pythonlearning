@@ -1,0 +1,34 @@
+{
+  "emps": [
+    {
+      "id": 1,
+      "name": "emp1",
+      "salary": 34567,
+      "image": "../../assets/images/face1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Suman",
+      "salary": 34544,
+      "image": "../../assets/images/face2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sumit",
+      "salary": 34533,
+      "image": "../../assets/images/face3.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Emp10",
+      "salary": 44556,
+      "image": ""
+    },
+    {
+      "id": 11,
+      "name": "Emp11",
+      "salary": 44557,
+      "image": ""
+    }
+  ]
+}

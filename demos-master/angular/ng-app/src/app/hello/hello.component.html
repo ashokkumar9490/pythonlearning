@@ -1,0 +1,52 @@
+<h3 id="h31">Hello {{ myName | uppercase }}</h3>
+
+<h3 *ngIf="salary > 0">Salary - {{ salary | currency : "INR" }}</h3>
+@if (salary>25000) {
+<h4 class="text-success">You Salary is more than 25000</h4>
+} @else {
+<h4 [ngClass]="classname">You Salary is less than 25000</h4>
+}
+
+<!-- <div>
+  Your salary after Increment - {{ calc2.add(salary, 5000) | currency : "INR" }}
+</div> -->
+
+<div>Your salary after Increment - {{ getIncrement() | currency : "INR" }}</div>
+
+@switch (weekDay) { @case ("Sun"){
+<h3>Enjoy! It's Sunday</h3>
+} @case ("Sat"){
+<h3>Enjoy! It's Saturday</h3>
+} @case ("Mon"){
+<h3>Back to work</h3>
+}}
+
+<br />
+<ul>
+  @for (friend of friendNames; track $index) {
+  <li>{{ $index + 1 }} - {{ friend }}</li>
+  }
+</ul>
+
+<input type="text" [(ngModel)]="company" />
+<h4>{{ company }}</h4>
+
+<h4>My favorite Friends are-</h4>
+<ul>
+  <li>{{ friendNames[0] }}</li>
+  <li>{{ friendNames[2] }}</li>
+</ul>
+
+<h4>My All Friends are-</h4>
+<ul *ngFor="let friend of friendNames" style="line-height: 3px">
+  <li>{{ friend }}</li>
+</ul>
+
+<hr />
+
+<button (click)="SayHello()" [disabled]="isDisabled">Click Me</button>
+
+<br />
+Message - {{ message }}
+
+<hr />

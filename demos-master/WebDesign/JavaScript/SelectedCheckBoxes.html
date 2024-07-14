@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" id="c1" name="items" value="100000" />
+      <label id="l1" name="labels" for="c1">laptop</label>
+
+      <input type="checkbox" id="c2" name="items" value="50000" />
+      <label id="l2" name="labels" for="c2">Tablet</label>
+
+      <input type="checkbox" id="c3" name="items" value="20000" />
+      <label id="l3" name="labels" for="c3">Mobile</label>
+
+      <input type="checkbox" id="c4" name="items" value="1000" />
+      <label id="l4" name="labels" for="c4">Mouse</label>
+
+      <input type="checkbox" id="c5" name="items" value="2000" />
+      <label id="l5" name="labels" for="c5">Keyboard</label>
+    </div>
+    <br />
+    <input
+      type="button"
+      value="Check Selected Items"
+      onclick="getSelectedItems()"
+    />
+    <br />
+    <p id="p1"></p>
+    <br />
+    <script>
+      function getSelectedItems() {
+        var items = document.getElementsByName("items");
+        var labels = document.getElementsByName("labels");
+        var total = 0;
+        var counter = 0;
+        var s = "";
+        var arr = [];
+        for (var i = 0; i < items.length; i++) {
+          if (items[i].checked) {
+            total += parseInt(items[i].value);
+            counter++;
+            s += labels[i].innerHTML + ", ";
+            arr.push(labels[i].innerHTML);
+          }
+        }
+        document.getElementById("p1").innerHTML =
+          "Selected items are " +
+          counter +
+          " Items are " +
+          arr.toString() +
+          " <br/>total value = " +
+          total;
+      }
+    </script>
+  </body>
+</html>

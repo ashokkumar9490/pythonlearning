@@ -1,0 +1,9 @@
+<p>react1 works!</p>
+
+<!-- bind it to html control -->
+Favorite Color: <input type="text" [formControl]="colorControl" />
+
+<!-- get value of control using value -->
+<p [style.color]="colorControl.value">Value: {{ colorControl.value }}</p>
+
+<button type="button" (click)="updateName()">Update Name</button>

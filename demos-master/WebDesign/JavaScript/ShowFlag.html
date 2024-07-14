@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+      function ShowNumFlag() {
+        var num = parseInt(prompt("Enter a number"));
+        var flag = "";
+        if (!isNaN(num)) {
+          for (var i = 0; i < num; i++) {
+            for (var j = 0; j <= i; j++) {
+              flag = flag + (j + 1);
+            }
+            flag = flag + "<br/>";
+          }
+          document.getElementById("p1").innerHTML = flag;
+        } else {
+          alert("Please enter a Number");
+        }
+      }
+
+      function ShowCharFlag() {
+        var num = parseInt(prompt("Enter a number"));
+        var flag = "";
+        if (!isNaN(num)) {
+          for (var i = 0; i < num; i++) {
+            for (var j = 0; j <= i; j++) {
+              flag = flag + String.fromCharCode(j + 65);
+            }
+            flag = flag + "<br/>";
+          }
+          document.getElementById("p1").innerHTML = flag;
+        } else {
+          alert("Please enter a Number");
+        }
+      }
+
+      function ShowNameFlag() {
+        var name = prompt("Enter a name"); //sharad
+        var flag = "";
+        for (var i = 0; i < name.length; i++) {
+          for (var j = 0; j <= i; j++) {
+            flag = flag + name.charAt(j);
+          }
+          flag = flag + "<br/>";
+        }
+        //       flag
+        //s
+        //sh
+        //sha
+        //shar
+        //shara
+        //sharad
+        document.getElementById("p1").innerHTML = flag;
+      }
+
+      function ShowStringFlag2() {
+        var name = prompt("Enter a name");
+        name = name.toUpperCase();
+        var flag = "";
+        for (var i = 0; i < name.length; i++) {
+          for (var j = 0; j <= i; j++) {
+            flag = flag + name.charAt(j);
+          }
+          flag = flag + "<br/>";
+        }
+        for (var i = name.length - 2; i >= 0; i--) {
+          for (var j = 0; j <= i; j++) {
+            flag = flag + name.charAt(j);
+          }
+          flag = flag + "<br/>";
+        }
+        document.getElementById("p1").innerHTML = flag;
+      }
+
+      function ShowWords() {
+        var name = prompt("Enter a Sentence");
+
+        var words = name.toUpperCase().split(" ");
+        var flag = "";
+        //arr.length will provide num of elements - size
+        for (var j = 0; j < words.length; j++) {
+          flag = flag + words[j] + "<br/>";
+        }
+        document.getElementById("p1").innerHTML = flag;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Show Num Flag" onclick="ShowNumFlag()" />
+    <input type="button" value="Show Char Flag" onclick="ShowCharFlag()" />
+    <input type="button" value="Show Name Flag" onclick="ShowNameFlag()" />
+    <input type="button" value="Show Name Flag 2" onclick="ShowStringFlag2()" />
+    <input
+      type="button"
+      value="Show Words of a sentence"
+      onclick="ShowWords()"
+    />
+    <div>
+      <p id="p1">Output will be displayed here....</p>
+    </div>
+  </body>
+</html>

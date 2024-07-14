@@ -1,0 +1,8 @@
+<div style="margin-left: 100px; background-color: lightskyblue">
+  <h1>parent works!</h1>
+  <h3>
+    Message from Child will appear here - <b>{{ msg2 }}</b>
+  </h3>
+
+  <app-child [pmsg]="msg" (notify)="getMessage($event)"></app-child>
+</div>

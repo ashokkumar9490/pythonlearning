@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function demowhile() {
+      let x = 1;
+      while (x < 6) {
+        console.log(x);
+        x++;
+      }
+    }
+    function demodowhile() {
+      let x = 1;
+      do {
+        console.log(x);
+        x++;
+      } while (x < 6);
+    }
+    function demofor() {
+      var str = "";
+      for (let index = 1; index < 11; index++) {
+        str += String(index) + " ";
+      }
+      console.log(str);
+    }
+    function demofor2() {
+      let data = [11, 44, 55, 33, 22];
+      var str = "";
+      for (let index = 0; index < data.length; index++) {
+        str += String(data[index]) + " ";
+      }
+      console.log(str);
+    }
+    function demoforof() {
+      let data = [11, 44, 55, 33, 22];
+      console.log(data.join(","));
+      var str = "";
+      for (const item of data) {
+        str += String(item) + " ";
+      }
+
+      console.log(str);
+    }
+
+    function demoforeach() {
+      let data = [11, 44, 55, 33, 22];
+      var str = "";
+      data.forEach((item, index) => {
+        data[index] += 1;
+        str += `${index + 1} - ${item} `;
+      });
+
+      console.log(str);
+      console.log("====================================");
+      console.log(data.join(","));
+    }
+
+    // Use the for-in loop to iterate over non-array objects.
+    function demo_forin() {
+      const courses = {
+        firstCourse: "C++ STL",
+        secondCourse: "DSA Self Paced",
+        thirdCourse: "CS Core Subjects",
+      };
+      for (let i in courses) {
+        // Prints all the keys in
+        // obj1 on the console
+        console.log(`${i} - ${courses[i]}`);
+      }
+    }
+  </script>
+  <body onload="demo_forin()"></body>
+</html>

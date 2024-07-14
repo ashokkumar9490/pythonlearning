@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Header and Footer</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        padding: 15px;
+      }
+
+      .header h1 {
+        margin: 0;
+        display: inline;
+      }
+
+      .header nav {
+        float: right;
+        margin-right: 50px;
+        display: inline;
+        line-height: 40px;
+      }
+
+      .header nav a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .header nav a:hover {
+        color: blue;
+      }
+
+      .content {
+        padding: 50px;
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Website</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <p style="margin-top: 30px">
+        This is the main content area of the website. You can add any kind of
+        content here, such as text, images, videos, etc.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
+        perspiciatis unde omnis iste natus error sit voluptatem accusantium
+        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+        inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 My Website</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!-- display all laptops -->
+
+<div *ngFor="let laptop of laptops">
+  <h5 class="card-title">{{ laptop.name }}</h5>
+  <h5 class="card-text">{{ laptop.price }}</h5>
+  <h6
+    style="margin-left: 100px"
+    *ngFor="let item of laptop.description.split(',')"
+  >
+    {{ item }}
+  </h6>
+</div>

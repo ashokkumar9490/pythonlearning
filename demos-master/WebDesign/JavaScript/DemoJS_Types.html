@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script>
+      Number.prototype.pad = function (size) {
+        var s = String(this);
+        while (s.length < (size || 2)) {
+          s = "0" + s;
+        }
+        return s;
+      };
+      function DemoRegex() {
+        var url = /(\w+):\/\/([\w.]+)\/(\S*)/;
+        var text = "Visit my blog at http://www.example.com/~Sharad";
+        var result = text.match(url);
+        if (result != null) {
+          var fullurl = result[0]; // Contains "http://www.example.com/~Sharad"
+          var protocol = result[1]; // Contains "http"
+          var host = result[2]; // Contains "www.example.com"
+          var path = result[3]; // Contains "~david"
+          alert(path);
+        }
+      }
+      function ChangeStatus() {
+        window.status = "JS Examples";
+      }
+      function DemoEval() {
+        var x = "document";
+        var y = eval(x);
+        //Dynamic evaluation of strings of source code is a powerful language feature
+        if (isNaN(arguments[0])) {
+          y.bgColor = arguments[0];
+        } else {
+          document.write(typeof arguments[0]);
+          document.write(typeof x);
+          x = parseInt(arguments[0]);
+          document.write(typeof x);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      window.defaultStatus = "JavaScript Examples";
+      var geval = eval; // Using another name does a global eval
+      var var1 = 123;
+      //var1 = new Number(123);           //object
+      var var2 = "India";
+      //var2 = new String("India");       //object
+      var var3 = true;
+      //var3 = new Boolean(true);         //object
+      var var4 = null;
+      var var5 = 5.67;
+      //var5 = new Number(5.67);
+      var var6 =
+        //var6 = new Date();
+
+        (var7 = new Number(123)); //object
+      document.write(typeof var1);
+      document.write(typeof var2);
+      document.write(typeof var3);
+      document.write(typeof var4);
+      document.write(typeof var5);
+      document.write(typeof var6);
+      document.write(typeof var7);
+      function display() {
+        var var1 = 125;
+        //var1 = new Number(123);           //object
+        var var2 = "India";
+        //var2 = new String("India");       //object
+        var var3 = true;
+        //var3 = new Boolean(true);         //object
+        var var4 = null;
+        var var5 = 5.67;
+        //var5 = new Number(5.67);
+
+        var6 = new Date(); //year,month (Jan=0),day --2017,8,1
+        document.write("</BR>");
+        document.write(eval("var1+5"));
+        document.write(geval("var1+5"));
+        document.write(var1);
+        document.write(var2);
+        document.write(var3);
+        document.write(var4);
+        document.write(var5);
+        //document.write(var6.toLocaleDateString());
+        document.write(
+          var6.getDate().pad() +
+            "/" +
+            (var6.getMonth() + 1).pad() +
+            "/" +
+            var6.getFullYear()
+        );
+      }
+      display();
+      DemoEval("skyblue");
+      DemoEval(15);
+
+      function makeItHot() {
+        var vars = this.toString();
+        return "<H1>This site is on " + vars + "!!</H1>";
+      }
+      String.prototype.hot = makeItHot;
+      document.write("FIRE".hot());
+    </script>
+
+    <input type="button" onclick="DemoRegex()" />
+  </body>
+</html>

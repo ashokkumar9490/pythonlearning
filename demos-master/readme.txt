@@ -1,0 +1,1 @@
+Repo for sharing UST Python FSD training's session demos

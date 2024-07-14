@@ -1,0 +1,21 @@
+<h2>Product List</h2>
+
+<select [(ngModel)]="selectedCategory">
+  <option value="">All Categories</option>
+  <option value="Electronics">Electronics</option>
+  <option value="Clothing">Clothing</option>
+  <option value="Home">Home</option>
+</select>
+<br />
+<h3>{{ selectedCategory }}</h3>
+<br />
+
+<ul *ngIf="products.length > 0">
+  <li *ngFor="let product of filteredProducts">
+    {{ product.name }} - {{ product.price | currency : "USD" }} ({{
+      product.category
+    }})
+  </li>
+</ul>
+
+<p *ngIf="products.length === 0">No products found.</p>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+    <script>
+      function doThis(num) {
+        return ++num;
+      }
+
+      function doThat(num) {
+        return --num;
+      }
+
+      function demo1() {
+        var x = doThis;
+        alert(x);
+        var y = doThat(10);
+        alert(y);
+        var z = x(y);
+        alert(z);
+        alert(doThat(z - y));
+      }
+
+      function demo2() {
+        var str1 = "Hello World!";
+        alert("str1.substr(6,10) = " + str1.substr(6, 10));
+        // second parameter specifies the length of the extracted part
+
+        alert("str1.substring(6,10) = " + str1.substring(6, 10));
+        // method takes 2 parameters: start position, and end position (end not included)
+
+        alert("str1.charAt(2) = " + str1.charAt(2));
+        alert("str1.concat(' again') = " + str1.concat(" again"));
+
+        var arr = ["aaa", "bbb", "ccc"];
+        alert(arr.join(" "));
+        var str2 = str1.split(" ");
+        alert(str2[1]);
+        alert("str1.substring(6) = " + str1.substring(6));
+        alert("str1.substring(6,5) = " + str1.substring(6, 5));
+        alert("str1.substring(-6) = " + str1.substring(-6));
+        alert("str1.slice(-5) = " + str1.slice(-5));
+        alert("str1.slice(-6,str1.length) = " + str1.slice(-6, str1.length));
+        alert("str1.replace(/o/g,'0') = " + str1.replace(/o/g, "0"));
+      }
+
+      function onlyalphabate() {
+        let element = document.getElementById("Text2");
+        var regexp = /^[a-zA-Z]{2,}$/;
+        if (element.value.match(regexp)) {
+          alert("Letter Validation: Successful.");
+          return true;
+        } else {
+          alert("Not a text");
+          return false;
+        }
+      }
+      function validate() {
+        var text1 = document.getElementById("Text1");
+        if (text1.value.length == 0) {
+          text1.style.backgroundColor = "Red";
+        } else {
+          text1.style.backgroundColor = "White";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      <br />
+    </p>
+    <p>
+      <input id="Text1" type="text" />
+      <input id="Button1" type="button" value="Validate" onclick="validate()" />
+    </p>
+    <p>
+      <input id="Text2" type="text" />
+      <input
+        id="Button2"
+        type="button"
+        value="Validate"
+        onclick="onlyalphabate()"
+      />
+    </p>
+    <p>
+      <input id="Button3" type="button" value="button1" onclick="demo1()" />
+    </p>
+  </body>
+</html>

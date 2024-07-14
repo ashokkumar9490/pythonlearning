@@ -1,0 +1,139 @@
+<!--  display all cricket players using bootstrap table wil all columns 
+
+-->
+
+<div class="container">
+  <h1>
+    <img
+      src="https://images.indianexpress.com/2023/06/BCCI-LOGO-CROPPED.jpg"
+      alt="BCCI Logo"
+      class="bcci-logo"
+      style="width: 55px; height: 35px; margin-right: 10px"
+    />BCCI Selection Portal
+  </h1>
+
+  <div class="row">
+    <div class="col">
+      <div *ngIf="countOfBatsman < 2" class="alert alert-danger" role="alert">
+        You don't have required no of batsman in the team
+      </div>
+      <div *ngIf="countOfBowler < 2" class="alert alert-danger" role="alert">
+        You don't have required no of bowlers in the team
+      </div>
+      <div
+        *ngIf="countOfWicketKeeper < 1"
+        class="alert alert-danger"
+        role="alert"
+      >
+        You don't have required no of wicketkeeper in the team
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Cricket Players - {{ cricketPlayers.length }}</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>JerseyNumber</th>
+            <th>Skill</th>
+            <th>Select</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of cricketPlayers">
+            <td>{{ player.jerseyNumber }}</td>
+            <td>{{ player.name }}</td>
+            <td>{{ player.skill }}</td>
+            <td>
+              <input
+                type="checkbox"
+                [checked]="player.isSelected"
+                (change)="selectPlayer(player)"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h2>Selected Players - {{ selectedPlayers.length }}</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>JerseyNumber</th>
+            <th colspan="2">Skill</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of selectedPlayers">
+            <td>{{ player.jerseyNumber }}</td>
+            <td>{{ player.name }}</td>
+            <td>
+              <select [(ngModel)]="player.skill">
+                <option *ngFor="let skill of skills" [value]="skill">
+                  {{ skill }}
+                </option>
+              </select>
+            </td>
+            <td>
+              <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="delete"
+                class="small-icon"
+                style="font-size: 20px; cursor: pointer; color: red"
+                (click)="removePlayer(player)"
+              ></mat-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h2>Summary</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Player Type</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            [style.background-color]="
+              countOfBatsman < 2 ? 'lightcoral' : 'lightgreen'
+            "
+          >
+            <td>Batsman</td>
+            <td>{{ countOfBatsman }}</td>
+          </tr>
+          <tr
+            [style.background-color]="
+              countOfBowler < 2 ? 'lightcoral' : 'lightgreen'
+            "
+          >
+            <td>Bowler</td>
+            <td>{{ countOfBowler }}</td>
+          </tr>
+          <tr
+            [style.background-color]="
+              countOfWicketKeeper < 1 ? 'lightcoral' : 'lightgreen'
+            "
+          >
+            <td>WicketKeeper</td>
+            <td>{{ countOfWicketKeeper }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 
+there should be 2 batsmen, 2 bowlers, 1 wicketkeeper in team
+show messages to validate player types in the team
+like - you don't have required no of bowlers in the team
+-->

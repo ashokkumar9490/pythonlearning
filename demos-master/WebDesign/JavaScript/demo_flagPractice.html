@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function createFlag() {
+      num = prompt("Enter a number  ");
+      flag = "";
+      for (let row = 1; row <= num; row++) {
+        for (let col = 1; col <= row; col++) {
+          flag += String.fromCharCode(col + 65 - 1);
+        }
+        flag += "<br/>";
+      }
+      document.getElementById("p1").innerHTML = flag;
+    }
+  </script>
+  <body>
+    <button onclick="createFlag()">Create Flag</button>
+    <p id="p1">Flag will appear here...</p>
+  </body>
+</html>

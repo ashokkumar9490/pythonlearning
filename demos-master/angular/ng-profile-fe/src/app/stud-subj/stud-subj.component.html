@@ -1,0 +1,13 @@
+<table *ngFor="let user of users">
+  <tr>
+    <td>{{ user.name }}</td>
+    <td>-</td>
+  </tr>
+  <tr *ngFor="let qualifica of user.qualification">
+    <td></td>
+    <td>{{ qualifica.title }}</td>
+    <div *ngFor="let subject of qualifica.subjects">
+      {{ subject.title }}
+    </div>
+  </tr>
+</table>

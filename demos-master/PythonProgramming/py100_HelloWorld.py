@@ -1,0 +1,7 @@
+print("Hello, World!")
+print("Hello, World!", "Hello Again", "Hello, Yet Again")
+print("Hello, World!", "Hello Again", "Hello, Yet Again", sep=' | ')
+print("Hello, World!", "Hello Again", "Hello, Yet Again", sep=' | ', end="***\n")
+print("Hello, World!", end=' Done\n')
+print('Welcome to Python world.!!', file=open('Testfile.txt', 'w'))
+print("Hello, World!" * 5)

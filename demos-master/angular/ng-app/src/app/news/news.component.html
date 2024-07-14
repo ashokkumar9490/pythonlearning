@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Employees</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Published At</th>
+        <th>Title</th>
+        <th>Source</th>
+        <th>News Detail</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let news of newsdata">
+        <td>{{ news.publishedAt | date : "d/M/yyyy h:mm a'" }}</td>
+        <td>{{ news.title }}</td>
+        <td>{{ news.author }}</td>
+        <td>{{ news.content }}</td>
+        <img
+          src="{{ news.urlToImage }}"
+          alt="news image"
+          width="100px"
+          height="100px"
+        />
+      </tr>
+    </tbody>
+  </table>
+</div>

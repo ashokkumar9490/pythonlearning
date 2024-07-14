@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <input type="text" id="name" name="name" value="ee" />
+    <input type="button" value="Show Array" onclick="ShowArray()" />
+
+    <script>
+      var arr = ["aa", "bb", "cc", "dd"];
+
+      document.getElementById("p1").innerHTML = arr.toString();
+      document.getElementById("p2").innerHTML = arr[0];
+
+      function ShowArray() {
+        arr.push(document.getElementById("name").value);
+
+        var last = arr.pop();
+        console.log(last);
+
+        var first = arr.shift();
+        //The shift() method removes the first array element and "shifts" all other elements to a lower index.
+        console.log(first);
+
+        document.getElementById("p1").innerHTML = arr.toString();
+      }
+    </script>
+  </body>
+</html>
