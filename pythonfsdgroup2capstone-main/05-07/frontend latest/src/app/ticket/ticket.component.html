@@ -1,0 +1,49 @@
+<div class="ticket">
+    <div class="ticket-header">
+      <h2 style="color: brown;">Ticket Details</h2>
+    </div>
+    <div class="ticket-body">
+      <div class="ticket-info">
+ 
+        <div class="ticket-field">
+          <span class="ticket-label">Movie:</span>
+          <span class="ticket-value">{{ movieName }}</span>
+        </div>
+ 
+        <div class="ticket-field">
+            <span class="ticket-label">Theatre </span>
+            <span class="ticket-value">{{theater }}</span>
+          </div>
+ 
+        <div class="ticket-field">
+          <span class="ticket-label">Date </span>
+          <span class="ticket-value">{{selectedDate}}</span>
+        </div>
+ 
+        <div class="ticket-field">
+          <span class="ticket-label">Time </span>
+          <span class="ticket-value">{{111111}}</span>
+        </div>
+ 
+ 
+        <div class="ticket-field">
+          <span class="ticket-label">Seat Number:</span>
+          <span class="ticket-value">{{ seatNumber }}</span>
+        </div>
+ 
+       
+        <div class="ticket-field">
+            <span class="ticket-label">TotalAmount:</span>
+            <span class="ticket-value">{{totalprice}}</span>
+          </div>
+ 
+        <br><br><br>
+        <div class="ticket-field">
+            <button mat-raised-button color="primary" (click)="downloadTicketPdf()">Download Ticket</button>
+          </div>
+      </div>
+     
+    </div>
+  </div> 
+
+ 

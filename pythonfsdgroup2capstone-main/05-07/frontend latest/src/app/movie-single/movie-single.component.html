@@ -1,0 +1,82 @@
+<!-- {{incomingArticleObject }} -->
+
+
+<body style="background-color:  #f0f0f0;;">   
+
+ 
+
+    <div class="container">
+
+        <div class="card" style="width: 300px; " >     
+            <img *ngIf="incomingArticleObject?.image" class="card-img-top" [src]="incomingArticleObject?.image" [width]="200" [height]="200" alt="Card image" />    
+             
+            <div class="card-body">
+                <h3 class="card-title">Name: {{ incomingArticleObject.name }}</h3>
+                <!-- <p class="card-text">IMDB rating: {{incomingArticleObject.rating}}</p>
+                <p class="card-text"> Description: {{ incomingArticleObject.desc }} </p>  -->
+                 
+            </div>
+            <!-- <button type="submit" class="btn btn-success" (click)="addFav(this.incomingArticleObject)">Add to Favourites</button> -->
+
+        </div> 
+        
+    </div>
+     
+    <div  class="x1" style="margin-top: 20px;" color="red"> 
+        <label for="tkt" style="color:blue;">No of tickets </label>
+     
+        <mat-form-field> 
+            <input matInput type="number" id="tkt" placeholder="Number of tickets" [(ngModel)]="numberOfTickets" (input)="calculateTotal()"/>
+          </mat-form-field> <br>
+    </div>  
+
+    <div class="x1">
+        <label for="date"  style="color:blue">Choose date</label>
+        <mat-form-field>
+           
+            <input matInput [matDatepicker]="picker" placeholder="Select a date" id="date" [(ngModel)]="selectedDate" >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+         
+    </div>
+
+    <div class="x1">
+        <label for="th"  style="color:blue">Choose time</label>
+        <mat-form-field>
+            <mat-label>Select Time</mat-label>
+            <mat-select [formControl]="timeControl">
+              <mat-option *ngFor="let time of timeval" [value]="time">
+                {{ time }}
+              </mat-option>
+            </mat-select>  
+          </mat-form-field>
+    </div>
+
+
+    <div class="x1">
+        <label for="th"  style="color:blue">Choose theatre</label>
+        <mat-form-field>
+            <mat-label>Select a Theater</mat-label>
+            <mat-select [formControl]="theaterControl">
+              <mat-option *ngFor="let theater of theaters" [value]="theater">
+                {{ theater }}
+              </mat-option>
+            </mat-select>  
+          </mat-form-field>
+    </div>
+    <div class="x1">
+      <p>
+        Total Amount:
+        {{ calculateTotal() | currency : "USD" : "symbol" : "1.2-2" }}
+      </p>
+    </div>
+        
+    <div class="x1">
+         
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Proceed to Pay</button>
+    </div>
+          
+     
+     
+</body>
