@@ -1,0 +1,72 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Appoinment Request form</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Full Name: </td>
+                <td>
+                    <input type="text" placeholder="Enter name here" required />
+                </td>
+            </tr>
+            <tr>
+                <td>City: </td>
+                <td>
+                    <input type="text" placeholder="Enter name here" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td>
+                    <input type="text" placeholder="Enter address here" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Email id</td>
+                <td>
+                    <input type="email" placeholder="example@gmail.com" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Pin code</td>
+                <td>
+                    <input type="text" name="pincode" placeholder="enter your pincode here" pattern="^[0-9]{6}$"
+                        required />
+                </td>
+            </tr>
+            <tr>
+                <td>Select Gender</td>
+                <td>
+                    <input type="radio" id="radMale" name="gender" />
+                    <label for="radMale">Male</label>
+                    <input type="radio" id="radFemale" name="gender" />
+                    <label for="radFemale">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>what date and time work best for you </td>
+                <td>
+                    <input type="date" min="2000-01-01" max="2030-01-01" required />
+                    <input type="time" required />
+                </td>
+            </tr>
+            <tr>
+                </input>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

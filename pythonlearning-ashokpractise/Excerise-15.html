@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMI Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">EMI Calculator per month</h1>
+    <div class="form-group">
+      <label for="loanAmount">Loan Amount (in INR):</label>
+      <input type="number" class="form-control" id="loanAmount" placeholder="Enter Loan amount">
+    </div>
+    <div class="form-group">
+      <label for="interestRate">Annual Interest Rate (%):</label>
+      <input type="number" class="form-control" id="interestRate" placeholder="Enter annual Interest rate">
+    </div>
+    <div class="form-group">
+      <label for="loanTerm">Loan  (in years):</label>
+      <input type="number" class="form-control" id="loanTerm" placeholder="Enter loan in years">
+    </div>
+    <button type="button" class="btn btn-primary mb-3" onclick="calculateEMIpermonth()">Calculate EMI per month</button>
+ 
+    <div id="result" class="d-none">
+      <h3 class="mt-4">EMI Details</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>EMI</th>
+            <th>Principal</th>
+            <th>Interest</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody id="emiDetails">
+          <!-- EMI details will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 
+  <script>
+    function calculateEMIpermonth() {
+      var loanAmount = document.getElementById('loanAmount').value;
+      var interestRate = document.getElementById('interestRate').value / 100 / 12; // Monthly interest rate
+      var loanTermMonths = document.getElementById('loanTerm').value * 12; // Loan term in months
+ 
+      var emi = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTermMonths)) / (Math.pow(1 + interestRate, loanTermMonths) - 1);
+      emi = parseFloat(emi.toFixed(2)); // Round to 2 decimal places
+ 
+      var principal = loanAmount;
+      var totalInterest = 0;
+ 
+      var emiDetailsHTML = '';
+ 
+      for (var i = 1; i <= loanTermMonths; i++) {
+        var interest = principal * interestRate;
+        var principalComponent = emi - interest;
+        principal = principal - principalComponent;
+        totalInterest += interest;
+ 
+        emiDetailsHTML += '<tr>';
+        emiDetailsHTML += '<td>' + i + '</td>';
+        emiDetailsHTML += '<td>' + emi.toFixed(2) + '</td>';
+        emiDetailsHTML += '<td>' + principalComponent.toFixed(2) + '</td>';
+        emiDetailsHTML += '<td>' + interest.toFixed(2) + '</td>';
+        emiDetailsHTML += '<td>' + principal.toFixed(2) + '</td>';
+        emiDetailsHTML += '</tr>';
+      }
+ 
+      document.getElementById('emiDetails').innerHTML = emiDetailsHTML;
+ 
+      document.getElementById('result').classList.remove('d-none');
+    }
+  </script>
+</body>
+</html>

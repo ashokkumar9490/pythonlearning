@@ -1,0 +1,31 @@
+<p>Exercise 17 Works.....</p>
+ 
+<div class="container">
+    <h1>Product List</h1>
+ 
+    <select [(ngModel)]="selectedCategory">
+      <option value="">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Home">Home</option>
+    </select>
+ 
+    <table *ngIf="filteredProducts.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency:'INR' }}</td>
+          <td>{{ product.category }}</td>
+        </tr>
+      </tbody>
+    </table>
+ 
+    <p *ngIf="filteredProducts.length === 0">No products found.</p>
+  </div>

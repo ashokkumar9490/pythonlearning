@@ -1,0 +1,22 @@
+<p>employees works!</p>
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Payable Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employee">
+        <td> {{ employee.id }} </td>
+        <td> {{ employee.name }} </td>
+        <td> {{ employee.salary | currency: '$' }} </td>
+        <td> {{ employee.getPayablesalary() | currency: '$' }}</td>
+ 
+      </tr>
+       
+     
+    </tbody>
+  </table>

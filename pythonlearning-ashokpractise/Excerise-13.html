@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid rgb(72, 71, 71);
+            margin-left:  400px;
+            margin-right: 400px;
+            padding: 5px;
+            height: 300px;
+            background-color: rgb(182, 134, 134);
+        }
+    </style>
+    <script>
+        function getTotal() {
+          PA = parseInt(document.getElementById("PA").value);
+          IPA = parseInt(document.getElementById("IPA").value);
+          TIM = parseInt(document.getElementById("TIM").value);
+       
+          const monthlyRate = IPA / 12 / 100;
+          const emi = (PA * monthlyRate * Math.pow(1 + monthlyRate, TIM)) / (Math.pow(1 + monthlyRate, TIM) - 1);
+          document.getElementById("result").innerHTML = `EMI is Rs. ${emi}`;
+ 
+        }
+ 
+        function clearCal(){
+            document.getElementById("PA").value="";
+            document.getElementById("IPA").value="";
+            document.getElementById("TIM").value="";
+        }
+    </script>
+ 
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">EMI Calculator</h1>
+        <table>
+        <tr>
+            <td>Principal Amount in Rs.  </td>
+            <td><input type="text" id="PA" /></td>
+        </tr>
+        <tr>    
+            <td>Interest Per Annum  </td>
+            <td><input type="text" id="IPA" /></td>
+        </tr>
+        <tr>
+            <td>Tenure in Months  </td>
+            <td><input type="text" id="TIM" /></td>
+        </tr>
+        <tr>
+        <br style="clear: both;"/>
+        </tr>
+        <tr>
+            <td><input onclick="getTotal()" type="button" id="cal" value="Calculate"/></td>
+            <td><input type="button" id="clear" value="Clear" onclick="clearCal()"/></td>
+        </tr>
+    </div>  
+    </table>
+    <br/>
+    <span class="result" id="result" style="text-align: center;"></span>
+</body>
+</html>

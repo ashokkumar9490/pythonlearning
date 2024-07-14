@@ -1,0 +1,35 @@
+{
+  "laps": [
+    {
+      "id": "1",
+      "model": "Lenovo",
+      "company": "Lenovo",
+      "price": 30000
+    },
+    {
+      "id": "3",
+      "model": "Hp 15S",
+      "company": "HP",
+      "price": 45000
+    },
+    {
+      "id": "2",
+      "model": "Dell Macbook",
+      "company": "DEEL",
+      "price": 65000
+    },
+    {
+      "id": "4",
+      "model": "Acer Aspire Vero",
+      "company": "ACER",
+      "price": 30000
+    },
+   
+    {
+      "id": "5",
+      "model": "9999",
+      "company": "jjj",
+      "price": 0
+    }
+  ]
+}

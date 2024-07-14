@@ -1,0 +1,3 @@
+Column,Count,Average,Min,Max
+Population,2,5.50,3.00,8.00
+Area (km²),2,798.00,625.00,971.00

@@ -1,0 +1,57 @@
+<!-- <div>
+  <h2>Login Form</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" formControlName="username" type="text">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password">
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <p>{{ message }}</p>
+</div>
+ -->
+ <p>login-form works!</p>
+<br>
+<div class="box">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="login-header">
+            <h4><b>Login</b></h4>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login">login</mat-icon>
+        </div>
+        <mat-form-field>
+            <mat-label>User Id</mat-label>
+            <input matInput placeholder="Enter your username" formControlName="userName" id="userName"
+                autocomplete="off" />
+            <mat-error
+                *ngIf="loginForm.get('userName')?.invalid && (loginForm.get('userName')?.dirty || loginForm.get('userName')?.touched)">
+                Please enter a valid username.
+            </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter your username" formControlName="password" id="password" type="password"
+                autocomplete="off" />
+            <mat-error
+                *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                Please enter a valid username.
+            </mat-error>
+        </mat-form-field>
+        <br />
+        <br />
+        <button type="submit" [class.highlight]="loginForm.valid">Submit</button>
+    </form>
+    <!-- <pre id="pre1">{{ formvalues }}</pre> -->
+</div>
+
+
+
+
+
+
+
+

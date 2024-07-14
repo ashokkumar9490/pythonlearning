@@ -1,0 +1,40 @@
+{
+    "emps": [
+      {
+        "id": 1,
+        "name": "Amit",
+        "salary": 34567,
+        "image": "../../assets/images/face2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Suman",
+        "salary": 34544,
+        "image": "../../assets/images/face3.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Sumit",
+        "salary": 34533,
+        "image": "../../assets/images/face4.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Sumant",
+        "salary": 34522,
+        "image": "../../assets/images/face5.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Sushil",
+        "salary": 34511,
+        "image": "../../assets/images/face5.jpg"
+      },
+      {
+        "name": "Sharad",
+        "salary": "44444",
+        "image": "../../assets/images/face4.jpg",
+        "id": 6
+      }
+    ]
+  }

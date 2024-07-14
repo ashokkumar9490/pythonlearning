@@ -1,0 +1,5 @@
+Order Items:
+Laptop (Dell) - $799.99
+Total Price: $1899.98
+Phone (Apple) - $1099.99
+Total Price: $1899.98

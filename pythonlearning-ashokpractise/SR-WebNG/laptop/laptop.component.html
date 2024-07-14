@@ -1,0 +1,183 @@
+<!-- <p>laptop works!</p>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Laptop Details
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <form [formGroup]="loginForm"   (ngSubmit)="onSubmit()">  
+            <mat-form-field style="width: 1000px;">
+                <mat-label>Id:</mat-label>
+                  <input  matInput
+                          placeholder="Id"
+                          formControlName="id"
+                          name="id"
+                          autocomplete="off"
+                          />
+                  <mat-error>Please provide Id</mat-error>        
+              </mat-form-field>
+              <br />
+              <mat-form-field style="width: 1000px;">
+                <mat-label>Model:</mat-label>
+                  <input  matInput
+                          placeholder="Model"
+                          formControlName="model"
+                          name="model"
+                          autocomplete="off"
+                          required/>
+              </mat-form-field>
+              <br/>
+ 
+              <mat-form-field style="width: 1000px;">
+                <mat-label>Company:</mat-label>
+                  <input  matInput
+                          placeholder="Company"
+                          formControlName="company"
+                          name="company"
+                          autocomplete="off"
+                          required/>
+              </mat-form-field>
+              <br/>
+ 
+              <mat-form-field style="width: 1000px;">
+                <mat-label>Price:</mat-label>
+                  <input  matInput
+                          placeholder="Price"
+                          formControlName="price"
+                          name="price"
+                          autocomplete="off"
+                          required/>
+              </mat-form-field>
+              <br/>
+ 
+              <button class="btn btn-primary" >Button</button>
+            </form>
+          </div>
+      </div>
+    </div>  
+ 
+ 
+<!- ----------------------------------------------------------------------- -->
+<!-- to display lap data in table format -->
+<!--<div>Count of star :{{count}}</div>
+<table class="table table-success table-hover">
+    <thead style="background-color: rgb(116, 72, 103);">
+    <tr>
+        <th>ID</th>
+        <th>MODEL</th>
+        <th>COMPANY</th>
+        <th>PRICE</th>
+        <th></th>
+        <th></th>
+    </tr>
+       
+    </thead>
+    <tbody *ngFor="let lap of laps; let i=index" [ngClass]="{ 'marked-row': lap.model.endsWith('*')}">
+    <tr >
+        <td>{{lap.id}}</td>
+        <td>{{lap.model}}</td>
+        <td>{{lap.company}}</td>
+        <td>{{lap.price}}</td>
+        <td><button class="btn btn-lg btn-danger" (click)="delRow(lap,i)">Delete</button></td>
+        <td><button class="btn btn-lg btn-danger" (click)="addMark(lap)"  >Mark</button></td>
+     
+         
+    </tr>
+    </tbody>
+   
+</table> -->
+ 
+<p>laptop works!</p>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Laptop Details
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <form [formGroup]="loginForm"   (ngSubmit)="onSubmit()">  
+            <mat-form-field style="width: 1000px;">
+                <mat-label>Id:</mat-label>
+                  <input  matInput
+                          placeholder="Id"
+                          formControlName="id"
+                          name="id"
+                          autocomplete="off"
+                          />
+                  <mat-error>Please provide Id</mat-error>        
+              </mat-form-field>
+              <br />
+              <mat-form-field style="width: 1000px;">
+                <mat-label>Model:</mat-label>
+                  <input  matInput
+                          placeholder="Model"
+                          formControlName="model"
+                          name="model"
+                          autocomplete="off"
+                          required/>
+              </mat-form-field>
+              <br/>
+ 
+              <mat-form-field style="width: 1000px;">
+                <mat-label>Company:</mat-label>
+                  <input  matInput
+                          placeholder="Company"
+                          formControlName="company"
+                          name="company"
+                          autocomplete="off"
+                          required/>
+              </mat-form-field>
+              <br/>
+ 
+              <mat-form-field style="width: 1000px;">
+                <mat-label>Price:</mat-label>
+                  <input  matInput
+                          placeholder="Price"
+                          formControlName="price"
+                          name="price"
+                          autocomplete="off"
+                          required/>
+              </mat-form-field>
+              <br/>
+ 
+              <button class="btn btn-primary" >Button</button>
+            </form>
+          </div>
+      </div>
+    </div>  
+ 
+ 
+<!-- ----------------------------------------------------------------------- -->
+<!-- to display lap data in table format -->
+<div>Count of star :{{count}}</div>
+<table class="table table-success table-hover">
+    <thead style="background-color: rgb(116, 72, 103);">
+    <tr>
+        <th>ID</th>
+        <th>MODEL</th>
+        <th>COMPANY</th>
+        <th>PRICE</th>
+        <th></th>
+        <th></th>
+    </tr>
+       
+    </thead>
+    <tbody *ngFor="let lap of laps; let i=index" [ngClass]="{ 'marked-row': lap.model.endsWith('*')}">
+    <tr >
+        <td>{{lap.id}}</td>
+        <td>{{lap.model}}</td>
+        <td>{{lap.company}}</td>
+        <td>{{lap.price}}</td>
+        <td><button class="btn btn-lg btn-danger" (click)="delRow(lap,i)">Delete</button></td>
+        <td><button class="btn btn-lg btn-danger" (click)="addMark(lap)"  >Mark</button></td>
+     
+         
+    </tr>
+    </tbody>
+   
+</table>
